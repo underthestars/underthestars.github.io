@@ -1,13 +1,11 @@
-title: Under the Stars
-description: Wairarapa Astronomy
-sitename: Under the Stars - Wairarapa Astronomy
-baseurl: ''
+# Site settings
+title: Under The Stars
+email: kaiora@underthestars.co.nz
+author: 
+description: Wairarapa Astronomy 
+url: https://www.underthestars.co.nz
+
+# Build settings
+permalink: :title/
 sass:
-  sass_dir: /assets/_sass
-  style: :compressed
-collections:
-  - features
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - CNAME
+  sass_dir: css
