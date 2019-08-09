@@ -1,0 +1,9 @@
+# Site settings
+title: Under The Stars
+email: kaiora@underthestars.co.nz
+author: 
+description: Wairarapa Astronomy 
+url: https://www.underthestars.co.nz
+
+# Build settings
+permalink: :title/
