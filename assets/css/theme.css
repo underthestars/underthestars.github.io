@@ -47,7 +47,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i|Amatic+SC:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i|Asap+Condensed:400,400i,700,700i|Amatic+SC:400,400i,700,700i');
 :root
 {
     --blue: #007bff;
@@ -520,7 +520,7 @@ h6,
 .h5,
 .h6
 {
-    font-family: 'Amatic SC', serif;
+    font-family: 'Asap Condensed', serif;
     font-weight: 400;
     line-height: 1.42857;
 
@@ -532,7 +532,8 @@ h6,
 h1,
 .h1
 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+    font-family: 'Amatic SC', serif;
 }
 
 h2,
@@ -12139,7 +12140,7 @@ a.text-dark:focus
  */
 .alert
 {
-    font-family: 'Amatic SC', serif;
+    font-family: 'Asap Condensed', serif;
 
     color: #151515;
     border-width: 2px 0 0 0;
@@ -12414,7 +12415,7 @@ a.text-dark:focus
 }
 .section_contact__info__item__content
 {
-    font-family: 'Amatic SC', serif;
+    font-family: 'Asap Condensed', serif;
 }
 .section_contact__info__item__content a[href*='tel']
 {
@@ -12712,7 +12713,7 @@ ul.section_contact__info__item__content > li + li
 }
 .section_events__item__content_sm time
 {
-    font-family: 'Amatic SC', serif;
+    font-family: 'Asap Condensed', serif;
     font-size: 2.5rem;
     line-height: 1;
 
@@ -12825,7 +12826,7 @@ blockquote
 }
 blockquote > p
 {
-    font-family: 'Amatic SC', serif;
+    font-family: 'Asap Condensed', serif;
 
     position: relative;
 
@@ -12882,17 +12883,17 @@ blockquote footer
 
 .form-control:-ms-input-placeholder
 {
-    font-family: 'Amatic SC', serif;
+    font-family: 'Asap Condensed', serif;
 }
 
 .form-control::-ms-input-placeholder
 {
-    font-family: 'Amatic SC', serif;
+    font-family: 'Asap Condensed', serif;
 }
 
 .form-control::placeholder
 {
-    font-family: 'Amatic SC', serif;
+    font-family: 'Asap Condensed', serif;
 }
 
 .invalid-feedback
@@ -13199,7 +13200,7 @@ input[type='time'].form-control-sm
 }
 .navbar-brand
 {
-    font-family: 'Amatic SC', serif;
+    font-family: 'Asap Condensed', serif;
     font-size: 2rem;
     font-style: italic;
 
@@ -13342,7 +13343,7 @@ input[type='time'].form-control-sm
 
 .section_phone__number
 {
-    font-family: 'Amatic SC', serif;
+    font-family: 'Asap Condensed', serif;
     font-size: 2.5rem;
     font-weight: bold;
 }
@@ -13368,7 +13369,7 @@ input[type='time'].form-control-sm
 }
 .section_quote__blockquote:before
 {
-    font-family: 'Amatic SC', serif;
+    font-family: 'Asap Condensed', serif;
     font-size: 10rem;
     line-height: 5rem;
 
@@ -13578,13 +13579,13 @@ body
     .section_welcome
     {
         height: 100vh;
-        padding-top: 70px;
+        padding-top: 40px;
         padding-bottom: 0;
     }
 }
 .section_welcome__heading
 {
-    font-size: 5rem;
+    font-size: 7rem;
     font-weight: 700;
 
     color: white;
@@ -13669,7 +13670,7 @@ body
 }
 .section_welcome__footer__address
 {
-    font-family: 'Amatic SC', serif;
+    font-family: 'Asap Condensed', serif;
 
     color: rgba(255, 255, 255, .7);
 }
@@ -13885,7 +13886,7 @@ body
 }
 .section_footer__open__time
 {
-    font-family: 'Amatic SC', serif;
+    font-family: 'Asap Condensed', serif;
     font-size: 1.25rem;
 }
 .section_footer__open + .section_footer__open
