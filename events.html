@@ -18,8 +18,8 @@ title: Events | Under The Stars | Wairarapa Astronomy
 				</div>
 			</div> <!-- / .row -->
 		</div> <!-- / .container -->
-	</section>
-
+	</section>  
+  
     	<!-- EVENTS
 	================================================== -->
 	<section class="section section_events section_no-padding_bottom">
@@ -46,11 +46,12 @@ title: Events | Under The Stars | Wairarapa Astronomy
 		<!-- Events -->
 		<div class="section_events__items">
 		
-			<!-- Event #1 -->
-			<div class="section_events__item active">
+			<!-- Event Reader -->
+{% for post in site.posts reversed %}
+			<div class="section_events__item{% if forloop.first %} active{% endif %}">
 
 				<!-- Bg image -->
-				<div class="section_events__item__bg" style="background-image: url(/assets/img/8.jpg)"></div>
+				<div class="section_events__item__bg" style="background-image: url({{post.image}})"></div>
 
 				<!-- Content -->
 				<div class="container">
@@ -62,21 +63,21 @@ title: Events | Under The Stars | Wairarapa Astronomy
 								
 								<!-- Date -->
 								<h3 class="section__preheading text-primary">
-									<time datetime="2019-08-18">18th August 2019</time>
+									<time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
 								</h3>
 
 								<!-- Heading -->
 								<h2 class="section__heading text-white">
-									WOAP - Burgers, Beers and Stars at Peppers Parehua!
+									{{ post.title }}
 								</h2>
 
 								<!-- Description -->
 								<p class="section__subheading">
-									Taking inspiration from the beautiful night sky surrounding the Wairarapa, Peppers Parehua have created our Smoke'n' hot Peppers Pig Burger – Using our house-made black brioche bun with white sesame seed as a nod to the sky above and a beautiful smokey pulled pork as a nod to the year of the pig, matched with a delightfully fruity Garage Project Hapi Daze Pacific Pale Ale. Our offering for this years WOAP is sure to be an event for all five senses.  
+									{{ post.excerpt }}
 								</p>
 
 								<!-- Button -->
-								<a href="https://www.facebook.com/events/469582047214444/" class="btn btn-primary text-white">
+								<a href="{{ post.link }}" class="btn btn-primary text-white">
 									Find out More
 								</a>
 
@@ -90,8 +91,8 @@ title: Events | Under The Stars | Wairarapa Astronomy
 							<div class="col-3 col-md-2 col-lg-1">
 								
 								<!-- Date -->
-								<time datetime="2019-10-11">
-									18th <small>August</small>
+								<time datetime="{{ post.date | date: "%Y-%m-%d" }}">
+									{{ post.date | date: "%-d" }} <small>{{ post.date | date: "%B" }}</small>
 								</time>
 
 							</div>
@@ -99,14 +100,14 @@ title: Events | Under The Stars | Wairarapa Astronomy
 								
 								<!-- Heading -->
 								<h4>
-									WOAP - Burgers, Beers and Stars at Peppers Parehua!
+									{{ post.title }}
 								</h4>
 
 							</div>
 							<div class="col-9 ml-auto col-md-3 text-md-right">
 								
 								<!-- Button -->
-								<a href="https://www.facebook.com/events/469582047214444/" class="btn btn-primary">
+								<a href="{{ post.link }}" class="btn btn-primary">
 									Find out More
 								</a>
 
@@ -118,149 +119,7 @@ title: Events | Under The Stars | Wairarapa Astronomy
 
 			</div> <!-- / .section_events__item -->
 
-			<!-- Event #2 -->
-			<div class="section_events__item">
-
-				<!-- Bg image -->
-				<div class="section_events__item__bg" style="background-image: url(/assets/img/9.jpg)"></div>
-
-				<!-- Content -->
-				<div class="container">
-
-					<!-- Content: Large -->
-					<div class="section_events__item__content_lg">
-						<div class="row">
-							<div class="col-md-8 col-lg-5">
-								
-								<!-- Date -->
-								<h3 class="section__preheading text-primary">
-									<time datetime="2019-10-11">11th October 2019</time>
-								</h3>
-
-								<!-- Heading -->
-								<h2 class="section__heading text-white">
-									Columbo Martinborough
-								</h2>
-
-								<!-- Description -->
-								<p class="section__subheading">
-									Come and see the stars and drinks some wine at Columbo Winery.
-								</p>
-
-								<!-- Button -->
-								<a href="https://www.colombo.co.nz" class="btn btn-primary text-white">
-								    Find out More
-								</a>
-
-							</div>
-						</div> <!-- / .row -->
-					</div> <!-- / .section_events__item__content_lg -->
-
-					<!-- Content: Small -->
-					<div class="section_events__item__content_sm">
-						<div class="row">
-							<div class="col-3 col-md-2 col-lg-1">
-								
-								<!-- Date -->
-								<time datetime="2017-09-29">
-									11th <small>October</small>
-								</time>
-
-							</div>
-							<div class="col-9 col-md-7 col-lg-8">
-								
-								<!-- Heading -->
-								<h4>
-									Columbo Martinborough
-								</h4>
-
-							</div>
-							<div class="col-9 ml-auto col-md-3 text-md-right">
-								
-								<!-- Button -->
-								<a href="https://www.colombo.co.nz" class="btn btn-primary">
-									Find out More
-								</a>
-
-							</div>
-						</div> <!-- / .row -->
-					</div> <!-- / .section_events__item__content_sm -->
-
-				</div> <!-- / .container -->
-
-			</div> <!-- / .section_events__item -->
-
-			<!-- Event #3 -->
-			<div class="section_events__item">
-
-				<!-- Bg image -->
-				<div class="section_events__item__bg" style="background-image: url(/assets/img/10.jpg)"></div>
-
-				<!-- Content -->
-				<div class="container">
-
-					<!-- Content: Large -->
-					<div class="section_events__item__content_lg">
-						<div class="row">
-							<div class="col-md-8 col-lg-5">
-								
-								<!-- Date -->
-								<h3 class="section__preheading text-primary">
-									<time datetime="2019-10-18">18th October 2019</time>
-								</h3>
-
-								<!-- Heading -->
-								<h2 class="section__heading text-white">
-									The Launch Party at Star Field Martinborough
-								</h2>
-
-								<!-- Description -->
-								<p class="section__subheading">
-									Martinborough's Darkest Stargazing spot launches for weekend visits to see and learn about astronomy in a fun and enjoyable setting.
-								</p>
-
-								<!-- Button -->
-								<a href="https://www.starfield.nz" class="btn btn-primary text-white">
-									Find out More
-								</a>
-
-							</div>
-						</div> <!-- / .row -->
-					</div> <!-- / .section_events__item__content_lg -->
-
-					<!-- Content: Small -->
-					<div class="section_events__item__content_sm">
-						<div class="row">
-							<div class="col-3 col-md-2 col-lg-1">
-								
-								<!-- Date -->
-								<time datetime="2017-09-28">
-									18th <small>October</small>
-								</time>
-
-							</div>
-							<div class="col-9 col-md-7 col-lg-8">
-								
-								<!-- Heading -->
-								<h4>
-									The Launch Party at Star Field Martinborough
-								</h4>
-
-							</div>
-							<div class="col-9 ml-auto col-md-3 text-md-right">
-								
-								<!-- Button -->
-								<a href="https://www.starfield.nz" class="btn btn-primary">
-									Find out More
-								</a>
-
-							</div>
-						</div> <!-- / .row -->
-					</div> <!-- / .section_events__item__content_sm -->
-
-				</div> <!-- / .container -->
-
-			</div> <!-- / .section_events__item -->
+  {% endfor %}
 
 		</div> <!-- / .section_events__items -->
 

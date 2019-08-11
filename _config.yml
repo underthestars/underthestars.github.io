@@ -7,3 +7,4 @@ url: https://www.underthestars.co.nz
 
 # Build settings
 permalink: :title/
+future: true
