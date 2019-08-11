@@ -12382,8 +12382,7 @@ a.text-dark:focus
 
     content: '';
 
-    opacity: .05; 
-    background: url(../img/icon_dot.svg) repeat;
+    opacity: .05;
 }
 
 /**
