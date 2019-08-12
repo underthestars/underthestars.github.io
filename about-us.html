@@ -84,8 +84,9 @@ title: About Us | Under The Stars | Wairarapa Astronomy
 		<div class="container section_quote__container">
 			<div class="row">
 				<div class="col col-md-8 ml-md-auto mr-md-auto">
-	
-	{% for post in site.categories.Testimonials limit:1 %}
+					
+	{% assign posts = site.categories.Testimonials | sample:2 %}
+	{% for post in posts limit:1 %}
 	
 					<!-- Blockquote -->
 					<blockquote class="section_quote__blockquote">
