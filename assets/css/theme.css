@@ -13589,6 +13589,13 @@ body
 
     color: white;
 }
+.section_welcome__heading_special
+{
+    font-size: 4rem;
+    font-weight: 700;
+
+    color: white;
+}
 .section_welcome__subheading
 {
     margin-bottom: 3rem;
