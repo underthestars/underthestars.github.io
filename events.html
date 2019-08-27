@@ -46,8 +46,12 @@ title: Events | Under The Stars | Wairarapa Astronomy
 		<!-- Events -->
 		<div class="section_events__items">
 		
-			<!-- Event Reader -->
+		<!-- Event Reader -->
+			
+{% assign curDate = site.time | date: '%s' %}			
 {% for post in site.categories.Events reversed %}
+  {% assign postStartDate = post.date | date: '%s' %}
+  {% if postStartDate >= curDate %}
 			<div class="section_events__item{% if forloop.first %} active{% endif %}">
 
 				<!-- Bg image -->
@@ -118,7 +122,7 @@ title: Events | Under The Stars | Wairarapa Astronomy
 				</div> <!-- / .container -->
 
 			</div> <!-- / .section_events__item -->
-
+	{% endif %}
   {% endfor %}
 
 		</div> <!-- / .section_events__items -->
