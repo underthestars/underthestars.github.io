@@ -1,0 +1,110 @@
+---
+layout: default
+title: Buy Something | Under The Stars | Wairarapa Astronomy
+permalink: /purchases
+---
+
+<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+	<!-- HEADER
+	================================================== -->
+	<section class="section section_header" data-parallax="scroll" data-image-src="/assets/img/14.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					
+					<!-- Heading -->
+					<h1 class="section__heading section_header__heading text-center">
+						Start your Stargazing Experience here.
+					</h1>
+
+				</div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</section>
+	
+	<!-- INFO
+	================================================== -->
+	<section class="section section_info section_info_opposite">
+		<div class="container">
+			
+			<div class="row align-items-justify">
+				<div class="col-md-6 order-md-3">
+					
+					<div class="section_info__img">
+						<img src="/assets/img/24.jpg" alt="Becky Bateman owns and runs Under The Stars">
+					</div>
+
+				</div>
+				<div class="col-md-1 order-md-2"></div>
+				<div class="col-md-5 order-md-1">
+
+					<div class="section_info__body">
+						<p class="lead text-heading">
+							Would you like to purchase a Stargazing Experience as a gift?
+						</p>
+						<p>
+							The best environmentally friendly present is a memorable experience. Treat a loved one to a special unique evening with an award-winning stargazing service.
+						</p>
+						<p>
+							We come to your place, set up all equipment that we need to show off the night sky. Telescopes, binoculars, warm blankets and star charts all ensure you are warm, comfy and have ring side seats to  wonder and be blown away by what we show you.<br>
+							We give you a bespoke tour of the heavens; as every night the sky is a little bit different. Enjoy learning about constellations and the stories that surround them, myths and legends from Māori folklore and practice navigating by the stars.
+						</p>
+						<p>	
+							Depending on the night you choose and what is available, we look at celestial planets, the Moon, nearby galaxies and other beautiful Milky Way objects through the telescope. 
+						</p>
+						<p>
+							Take the time to wonder at the night sky, reconnect to nature, reset your circadian rhythms (perfect for a good night sleep afterwards!) and understand why and how you can make the Wairarapa the next Dark Sky Reserve.
+							
+						</p>
+						<p>
+						    Gift Vouchers are for 90 minutes, a maximum 10 people and are valid for one year. We can post your Gift Voucher anywhere within New Zealand.
+						</p>
+						<p>
+							<button id="checkout-button-sku_GKIKwDQoPmJk4j" role="link">
+							  Buy your voucher now.
+							</button>
+							
+							<div id="error-message"></div>
+						</p>
+						<p>
+							<a href="/about-us/">Contact us here</a> to discuss your gift experience and book your special night.
+						</p>
+					</div>
+					
+				</div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</section>
+	
+	<script>
+(function() {
+  var stripe = Stripe('pk_live_gp6RjAX7u2RHERY9rgwd71Df00KOZTJ8XM');
+
+  var checkoutButton = document.getElementById('checkout-button-sku_GKIKwDQoPmJk4j');
+  checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_GKIKwDQoPmJk4j', quantity: 1}],
+
+      // Do not rely on the redirect to the successUrl for fulfilling
+      // purchases, customers may not always reach the success_url after
+      // a successful payment.
+      // Instead use one of the strategies described in
+      // https://stripe.com/docs/payments/checkout/fulfillment
+      successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
+      cancelUrl: window.location.protocol + '//www.underthestars.co.nz/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
