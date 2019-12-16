@@ -20,6 +20,7 @@
   </hotspots>
   <media/>
   <transition type="crossdissolve" zoomin="0" blendcolor="0x000000" zoomoutpause="1" zoomfov="20" zoomout="0" softedge="0" zoomspeed="2" blendtime="1" enabled="1"/>
+  <autorotate speed="0.400" delay="5.00" startloaded="0" useanimation="0" returntohorizon="0.000" enabled="1"/>
   <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
   <control contextprojections="0" rubberband="0" simulatemass="1" lockedmouse="0" lockedkeyboardzoom="0" invertwheel="0" dblclickfullscreen="0" lockedkeyboard="0" invertcontrol="1" sensitivity="8" contextfullscreen="1" lockedwheel="0" speedwheel="1"/>
 </panorama>

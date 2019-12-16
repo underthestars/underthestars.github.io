@@ -56,12 +56,28 @@
 			</tr>
 		</table>
 		<script type="text/javascript">
+		var startNode=document.location.hash.substring(1);
+		if (("onhashchange" in window) && (!(/MSIE (\d+\.\d+);/.test(navigator.userAgent)))) {
+			window.onhashchange = function () {
+				pano_left.openNext('{' + window.location.hash.substring(1) + '}');
+			}
+		} else {
+			var lastHash = window.location.hash;
+			window.setInterval(function () {
+				if (window.location.hash != lastHash) {
+					lastHash = window.location.hash;
+					pano_left.openNext('{' + window.location.hash.substring(1) + '}');
+				}
+			}, 100);
+		}
 	
 		// check for CSS3 3D transformations and WebGL
 		if (ggHasHtml5Css3D() || ggHasWebGL()) {
 			// create the panorama player with the container
 			pano_left=new pano2vrPlayer("container_left");
 			pano_right=new pano2vrPlayer("container_right");
+			pano_left.startNode=startNode;
+			pano_right.startNode=startNode;
 			// add the skin object
 			skin_left=new pano2vrSkin(pano_left);
 			skin_right=new pano2vrSkin(pano_right);
@@ -74,6 +90,7 @@
 		pano_right.readConfigUrl("pano.xml");
 		// add gyroscope controller
 		gyro=new pano2vrGyro([pano_left,pano_right],"container_left");
+		gyro.setTrueNorth(true); // set to true north
 		gyro.setUseRoll(true); // Use roll of gyroscope if set
 		gyro.setAdaptiveVOffset(true);
 		gyro.setUseMoveTo(false); // Faster responce
