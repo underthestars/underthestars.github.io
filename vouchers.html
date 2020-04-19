@@ -95,29 +95,65 @@ title: Buying Gift Vouchers | Under The Stars | Wairarapa Astronomy
 (function() {
   var stripe = Stripe('pk_live_gp6RjAX7u2RHERY9rgwd71Df00KOZTJ8XM');
 
-  var checkoutButton = document.getElementById('checkout-button-sku_GKIKwDQoPmJk4j');
+  var checkoutButton = document.getElementById('checkout-button-sku_H7fd6q2r022Egl');
   checkoutButton.addEventListener('click', function () {
-    // When the customer clicks on the button, redirect
-    // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{sku: 'sku_GKIKwDQoPmJk4j', quantity: 1}],
-
-      // Do not rely on the redirect to the successUrl for fulfilling
-      // purchases, customers may not always reach the success_url after
-      // a successful payment.
-      // Instead use one of the strategies described in
-      // https://stripe.com/docs/payments/checkout/fulfillment
+      items: [{sku: 'sku_H7fd6q2r022Egl', quantity: 1}],
       successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
       cancelUrl: window.location.protocol + '//www.underthestars.co.nz/canceled',
     })
     .then(function (result) {
       if (result.error) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer.
         var displayError = document.getElementById('error-message');
         displayError.textContent = result.error.message;
       }
     });
   });
+
+  var checkoutButton = document.getElementById('checkout-button-sku_H7fcwkE87vaOdN');
+  checkoutButton.addEventListener('click', function () {
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_H7fcwkE87vaOdN', quantity: 1}],
+      successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
+      cancelUrl: window.location.protocol + '//www.underthestars.co.nz/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+
+  var checkoutButton = document.getElementById('checkout-button-sku_H7fbDw3YGy2AZ3');
+  checkoutButton.addEventListener('click', function () {
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_H7fbDw3YGy2AZ3', quantity: 1}],
+      successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
+      cancelUrl: window.location.protocol + '//www.underthestars.co.nz/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+
+  var checkoutButton = document.getElementById('checkout-button-sku_GKIKwDQoPmJk4j');
+  checkoutButton.addEventListener('click', function () {
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_GKIKwDQoPmJk4j', quantity: 1}],
+      successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
+      cancelUrl: window.location.protocol + '//www.underthestars.co.nz/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+
 })();
 </script>
