@@ -1,0 +1,29 @@
+---
+layout: blank
+title: Redirecting | Under The Stars | Wairarapa Astronomy
+permalink: /coupon/
+---
+
+<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+<script>
+(function() {
+  var stripe = Stripe('pk_live_gp6RjAX7u2RHERY9rgwd71Df00KOZTJ8XM');
+
+	stripe.redirectToCheckout({
+		items: [{sku: window.location.search.replace("?",""), quantity: 1}],
+		successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
+		cancelUrl: window.location.protocol + '//www.underthestars.co.nz/canceled',
+		shippingAddressCollection: {
+			allowedCountries: ['NZ'],
+		}
+	})
+	.then(function (result) {
+		if (result.error) {
+		var displayError = document.getElementById('error-message');
+		displayError.textContent = result.error.message;
+		}
+	});
+
+})();
+</script>
