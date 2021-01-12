@@ -2,9 +2,13 @@
 title: Under The Stars
 email: kaiora@underthestars.co.nz
 author: Becky Bateman
-description: Wairarapa Astronomy 
+description: Astronomy under the Wairarapa's Dark Sky
 url: https://www.underthestars.co.nz
 
 # Build settings
 permalink: :title/
 future: true
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

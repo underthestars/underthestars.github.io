@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Under The Stars | Wairarapa Astronomy
+title: Under The Stars | Astronomy under the Wairarapa Dark Sky
 ---
 	<!-- WELCOME
 	================================================== -->
@@ -170,15 +170,15 @@ title: Under The Stars | Wairarapa Astronomy
 			<div class="row">
 				<div class="col">
 					<div class="section_testimonials__carousel">
-						
-{% for post in site.categories.Testimonials %}
+
+{% for item in site.data.testimonials %}
 						<div class="section_testimonials__carousel__item text-center text-md-left">
 							<div class="row align-items-center">
 								<div class="col-md-3 order-md-3">
 									
 									<!-- Photo -->
 									<div class="section_testimonials__photo">
-										<img src="{{post.image}}" class="img-fluid" alt="{{ post.title }}">
+										<img src="{{item.image}}" class="img-fluid" alt="{{ item.name }}">
 									</div>
 
 								</div>
@@ -187,10 +187,10 @@ title: Under The Stars | Wairarapa Astronomy
 									<!-- Blockquote -->
 									<blockquote class="section_testimonials__blockquote mx-auto">
 										<p>
-											{{ post.excerpt }}
+											{{ item.story }}
 										</p>
 										<footer class="text-muted">
-											{{ post.title }}
+											{{ item.name }}
 										</footer>
 									</blockquote>
 
