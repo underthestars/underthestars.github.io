@@ -1,0 +1,10 @@
+- name: Shop
+  link: /shop/
+- name: Our Team
+  link: /our-team/
+- name: What we do
+  link: /about-us/
+- name: Book Us
+  link: /book-us/
+- name: Contact Us
+  link: /contact-us/
