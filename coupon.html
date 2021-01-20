@@ -13,7 +13,7 @@ permalink: /coupon/
 	stripe.redirectToCheckout({
 		items: [{sku: window.location.search.replace("?",""), quantity: 1}],
 		successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
-		cancelUrl: window.location.protocol + '//www.underthestars.co.nz/canceled',
+		cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',
 		shippingAddressCollection: {
 			allowedCountries: ['NZ'],
 		}
@@ -27,3 +27,4 @@ permalink: /coupon/
 
 })();
 </script>
+
