@@ -534,6 +534,7 @@ h1,
 {
     font-size: 3.5rem;
     font-family: 'Amatic SC', serif;
+    line-height: 6.5rem;
 }
 
 h2,
@@ -13730,6 +13731,23 @@ body
 {
     padding: calc(70px + 3rem) 0 3rem;
 }
+.section_header_girl
+{
+    background-image: url('/assets/img/41.jpg');
+    background-position: center;
+    background-size: cover;
+}
+@media (min-width: 768px)
+{
+    .section_header_girl .container
+    {
+        background-image: url('/assets/img/girl.png');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size:contain;
+    }
+}
+
 .section_header:before
 {
     position: absolute;
