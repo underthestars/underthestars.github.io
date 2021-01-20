@@ -13744,7 +13744,7 @@ body
         background-image: url('/assets/img/girl.png');
         background-repeat: no-repeat;
         background-position: right bottom;
-        background-size:contain;
+        background-size: contain;
     }
 }
 
@@ -13758,7 +13758,7 @@ body
 
     content: '';
 
-    opacity: .5; 
+    opacity: .5;
     background-color: black;
 }
 @media (min-width: 768px)
