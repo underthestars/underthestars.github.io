@@ -13735,7 +13735,6 @@ body
 {
     background-image: url('/assets/img/41.jpg');
     background-position: center;
-    background-size: cover;
 }
 @media (min-width: 768px)
 {
@@ -13745,6 +13744,14 @@ body
         background-repeat: no-repeat;
         background-position: right bottom;
         background-size: contain;
+        opacity: 1;
+    }
+}
+@media (min-width: 998px)
+{
+    .section_header_girl .container
+    {
+        background-position: 90% bottom;
     }
 }
 
