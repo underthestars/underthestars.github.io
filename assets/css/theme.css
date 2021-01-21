@@ -13603,9 +13603,9 @@ body
 {
     color: rgba(255, 255, 255, .7) !important;
 }
-.section_welcome .text-bright
+.text-bright
 {
-    color: rgba(255, 255, 255, 1) !important;
+    color: #f8f9fa !important;
 }
 
 @media (min-width: 768px)
