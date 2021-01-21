@@ -13738,7 +13738,7 @@ body
 }
 @media (min-width: 768px)
 {
-    .section_header_girl .uts_girl
+    .section_header_girl .container
     {
         background-image: url('/assets/img/girl.png');
         background-repeat: no-repeat;
@@ -13748,7 +13748,7 @@ body
 }
 @media (min-width: 998px)
 {
-    .section_header_girl .uts_girl
+    .section_header_girl .container
     {
         background-position: 90% bottom;
     }
