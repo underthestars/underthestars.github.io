@@ -13744,7 +13744,6 @@ body
         background-repeat: no-repeat;
         background-position: right bottom;
         background-size: contain;
-        opacity: 1;
     }
 }
 @media (min-width: 998px)
@@ -13764,9 +13763,6 @@ body
     left: 0;
 
     content: '';
-
-    opacity: .5;
-    background-color: black;
 }
 @media (min-width: 768px)
 {
