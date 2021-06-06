@@ -111,60 +111,6 @@ title: Under The Stars | Astronomy Tours under the Wairarapa's Dark Sky
 			</div> <!-- / .row -->
 		</div> <!-- / .container -->
 	</section>
-
-	<!-- TESTIMONIALS
-	================================================== -->
-	<section class="section section_testimonials section_border_bottom">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-	
-					<!-- Heading -->
-					<h2 class="section__heading text-center">
-						What our clients say about us
-					</h2>
-
-				</div>
-			</div> <!-- / .row -->
-			<div class="row">
-				<div class="col">
-					<div class="section_testimonials__carousel">
-
-{% for item in site.data.testimonials %}
-						<div class="section_testimonials__carousel__item text-center text-md-left">
-							<div class="row align-items-center">
-								<div class="col-md-3 order-md-3">
-									
-									<!-- Photo -->
-									<div class="section_testimonials__photo">
-										<img src="{{item.image}}" class="img-fluid" alt="{{ item.name }}">
-									</div>
-
-								</div>
-								<div class="col-md-7 order-md-2">
-									
-									<!-- Blockquote -->
-									<blockquote class="section_testimonials__blockquote mx-auto">
-										<p>
-											{{ item.story }}
-										</p>
-										<footer class="text-muted">
-											{{ item.name }}
-										</footer>
-									</blockquote>
-
-								</div>
-								<div class="col-md-1 order-md-1"></div>
-							</div> <!-- / .row -->
-						</div>			
-{% endfor %}
-						
-					</div> <!-- / .carousel -->
-				</div>
-			</div> <!-- / .row -->
-		</div> <!-- / .container -->
-	</section>
-
 	
 	<!-- NEWSLETTER
 	================================================== -->

@@ -38,6 +38,60 @@ title: Events | Under The Stars | Wairarapa Astronomy
 			</div> <!-- / .row -->
 		</div> <!-- / .container -->
 
+			<!-- TESTIMONIALS
+	================================================== -->
+	<section class="section section_testimonials section_border_bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+	
+					<!-- Heading -->
+					<h2 class="section__heading text-center">
+						What our clients say about us
+					</h2>
+
+				</div>
+			</div> <!-- / .row -->
+			<div class="row">
+				<div class="col">
+					<div class="section_testimonials__carousel">
+
+{% assign testimonials = site.data.testimonials | sample:10 %}
+{% for item in testimonials %}
+						<div class="section_testimonials__carousel__item text-center text-md-left">
+							<div class="row align-items-center">
+								<div class="col-md-3 order-md-3">
+									
+									<!-- Photo -->
+									<div class="section_testimonials__photo">
+										<img src="{{item.image}}" class="img-fluid" alt="{{ item.name }}">
+									</div>
+
+								</div>
+								<div class="col-md-7 order-md-2">
+									
+									<!-- Blockquote -->
+									<blockquote class="section_testimonials__blockquote mx-auto">
+										<p>
+											{{ item.story }}
+										</p>
+										<footer class="text-muted">
+											{{ item.name }}
+										</footer>
+									</blockquote>
+
+								</div>
+								<div class="col-md-1 order-md-1"></div>
+							</div> <!-- / .row -->
+						</div>			
+{% endfor %}
+						
+					</div> <!-- / .carousel -->
+				</div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</section>
+
 		<!-- Events -->
 		<div class="section_events__items">
 		
