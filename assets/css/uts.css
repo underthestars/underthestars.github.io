@@ -1,5 +1,7 @@
 .h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{font-family: 'Amatic SC', cursive;font-weight:700}
 h1{font-size: 6.5em !important}
 
+.text-yellow{color: #fad549}
+
 footer a{text-decoration: none !important; color: #6c757d !important}
 footer a:hover{color: #f4952a !important}
