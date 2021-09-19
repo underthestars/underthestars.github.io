@@ -9,6 +9,11 @@ url: https://www.underthestars.co.nz
 permalink: :title/
 future: true
 
+defaults:
+  -
+    values:
+      theme: "dark"
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap

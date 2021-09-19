@@ -1,6 +1,6 @@
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-dark navbar-expand-lg navbar-togglable fixed-top">
+    <nav class="navbar navbar-{{ page.theme }} navbar-expand-lg {% if page.theme == 'dark' %}navbar-togglable{% endif %} fixed-top">
 		<div class="container">
 	  
 		  <!-- Navbar brand -->
@@ -22,13 +22,8 @@
 				<li class="nav-item">
 					<a class="nav-link" href="/book-us/">Book Us</a>
 				</li>
-				<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/podcasts/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Podcasts
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item nav-link" href="/podcasts/">Podcasts</a>
-          </ul>
+				<li class="nav-item">
+          <a class="nav-link" href="/podcasts/">Podcasts</a>
         </li>
 				<li class="nav-item">
 					<a class="nav-link" href="/education/">Education</a>
