@@ -1,0 +1,156 @@
+---
+layout: default
+title: Education | Under The Stars | Wairarapa Astronomy
+---
+
+    <!-- HEADER -->
+    <header data-jarallax data-speed=".8" style="background-image: url(/assets/img_uts/40.jpg);">
+      <div class="pt-10 pb-8 pt-md-15 pb-md-13 bg-black-50">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 text-center">
+
+              <!-- Heading -->
+              <h1 class="display-6 fw-bold text-white">
+                Under The Stars: Education
+              </h1>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ARTICLE -->
+    <article class="pt-10 pt-md-12">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6 text-center">
+
+            <!-- Preheading -->
+            <h6 class="text-xs text-primary">
+              Schools & groups
+            </h6>
+
+            <!-- Heading -->
+            <h1 class="display-2 mb-4">
+              Kia ora Principles and Teachers.
+            </h1>
+
+            <!-- Subheading -->
+            <p class="mb-6">
+              Science resource business Under The Stars has developed two new school programmes starting in Term 3. Perfect for fun STEAM days, overnight Camps and LEOTC sessions. We are the only astronomy resource that comes to you, wherever you are in the Wairarapa. Becky has a Science teaching degree and taught for six years in the UK and seven years as Educator at Space Place (Carter Observatory) in Wellington.
+            </p>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+
+            <!-- Image -->
+            <figure class="mb-6 text-center">
+              <img class="img-fluid" src="/assets/img/gallery/011.jpeg" alt="Educating a group">
+            </figure>
+
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8">
+
+            <!-- Heading -->
+            <h2 class="fw-bold mt-6 mb-3">
+              SCHOOL SPACE WORKSHOPS: The Solar System and Beyond- 1 hour interactive workshop
+            </h2>
+
+            <!-- Text -->
+            <p>
+              An interactive workshop about our Solar System; the Sun, planets and moons. We look at sizes, distances, seasons and Moon phases.
+              If the weather allows, we use Solar Glasses to look at the Sun safely and we create a scale model of our Solar System.
+              Workshops can be modified for any age and can include stellar evolution, black holes, galaxies, exo-planets, aliens… whatever your students would like to know! $80+GST an hour
+            </p>
+
+            <!-- Divider -->
+            <hr class="mt-6 mt-md-9 mb-0" />
+
+            <!-- Heading -->
+            <h2 class="fw-bold mt-6 mb-3">
+              SCHOOL EVENING SESSIONS: Night Sky stargazing – min 1 hour
+            </h2>
+
+            <!-- Text -->
+            <p>
+              Perfect for an overnight camp or an experience outside the classroom.
+              We bring telescopes, binoculars, star maps, torches, in fact everything you need for a enjoyable night stargazing. Learn about the science and stories behind stars, constellations and galaxies, distances, colours of stars, stellar evolution and exoplanets. Find out how to navigate using the sky, use seasonal markers and the understand the Maramataka.
+              Look at nearby celestial objects, planets and the Moon, star nebulae and globular clusters. $150 +GST an hour
+            </p>
+
+            <!-- Divider -->
+            <hr class="mt-6 mt-md-9 mb-0" />
+
+                                    <!-- Heading -->
+            <h2 class="fw-bold mt-6 mb-3">
+              We bring everything needed, all you need to do is tell us when and where!
+            </h2>
+
+            <!-- Text -->
+            <p>
+              Contact: <a href="mailto:education@underthestars.co.nz">education@underthestars.co.nz</a> or head to our <a href="/contact-us/">Contact us</a> page
+            </p>
+
+            <!-- Divider -->
+            <hr class="mt-6 mt-md-9 mb-0" />
+
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+
+    <!-- TESTIMONIALS -->
+    <section class="py-7 py-md-9 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6 text-center">
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              What clients say about us
+            </h2>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+
+            <!-- Slider -->
+            <div data-flickity='{"imagesLoaded": true, "wrapAround": true, "autoPlay": true, "prevNextButtons": false}'>
+              {% assign posts = site.data.testimonials | sample:5 %}
+              {% for post in posts limit:5 %}
+              <div class="w-100">
+                <div class="col-12 col-md-8 text-center mx-auto">
+
+                  <!-- Icon -->
+                  <span class="display-1 font-serif text-primary">”</span>
+      
+                  <!-- Blockquote -->
+                  <figure class="mb-0">
+                    <blockquote class="blockquote mb-0">
+                      <p class="font-serif text-black mb-6">
+                        {{ post.story }}
+                      </p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer text-xs mb-0">
+                      {{ post.name }}
+                    </figcaption>
+                  </figure>
+      
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
