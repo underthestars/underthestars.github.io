@@ -4,7 +4,7 @@ title: Contact Us | Under The Stars | Wairarapa Astronomy
 ---
 
   <!-- HEADER -->
-    <header data-jarallax data-speed=".8" style="background-image: url(/assets/img/37.jpg);">
+    <header data-jarallax data-speed=".8" style="background-image: url(/assets/img_uts/33.jpg);">
       <div class="pt-10 pb-8 pt-md-15 pb-md-13 bg-black-50">
         <div class="container">
           <div class="row justify-content-center">
@@ -34,7 +34,7 @@ title: Contact Us | Under The Stars | Wairarapa Astronomy
 
             <!-- Subheading -->
             <p class="mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam illo praesentium sequi in cum, beatae maiores quae qui.
+              We're available to answer your questions and ready to work with you, contact us here.
             </p>
 
           </div>
@@ -44,12 +44,21 @@ title: Contact Us | Under The Stars | Wairarapa Astronomy
 
             <!-- Heading -->
             <h4 class="mb-2 text-xs">
+              Ready to book your own tour?
+						</h4>
+						<!-- Text -->
+            <p class="mb-4 font-serif">
+              <a href="https://outlook.office365.com/owa/calendar/Booking@underthestars.co.nz/bookings/" class="text-dark-link">Book your own tour here</a>
+            </p>
+            
+            <!-- Heading -->
+            <h4 class="mb-2 text-xs">
               Write us
             </h4>
 
             <!-- Text -->
             <p class="mb-4 font-serif">
-              <a href="mailto:admin@domain.com">admin@domain.com</a>
+              <a href="mailto:kiaora@underthestars.co.nz" class="text-dark-link">kiaora@underthestars.co.nz</a>
             </p>
 
             <!-- Heading -->
@@ -59,7 +68,7 @@ title: Contact Us | Under The Stars | Wairarapa Astronomy
 
             <!-- Text -->
             <p class="mb-4 font-serif">
-              <a href="tel:+19876543210">+1 987 654 3210</a>
+              <a href="tel:+6462425194" class="text-dark-link">+64 6 242 5194</a>
             </p>
 
             <!-- Heading -->
@@ -69,7 +78,7 @@ title: Contact Us | Under The Stars | Wairarapa Astronomy
 
             <!-- Text -->
             <p class="mb-4 font-serif">
-              1234 Altschul, New York, NY 10027-0000
+              Wairarapa, New Zealand
             </p>
 
             <!-- Heading -->
@@ -79,13 +88,10 @@ title: Contact Us | Under The Stars | Wairarapa Astronomy
 
             <!-- List -->
             <div class="d-flex mb-6 mb-md-0 font-serif">
-              <a class="d-block me-3" href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a class="d-block me-3" href="#">
+              <a class="d-block me-3" href="https://www.facebook.com/underthestarsnz">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a class="d-block" href="#">
+              <a class="d-block" href="https://www.instagram.com/underthestarsnz">
                 <i class="fab fa-instagram"></i>
               </a>
             </div>
@@ -132,3 +138,28 @@ title: Contact Us | Under The Stars | Wairarapa Astronomy
     <!-- MAP -->
     <section class="bg-light" data-map='{"center": [175.489304,-41.101127], "zoom": 8}' style="height: 30rem;">
     </section>
+
+  <!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+	<script>
+	  window.fbAsyncInit = function() {
+	    FB.init({
+	      xfbml            : true,
+	      version          : 'v4.0'
+	    });
+	  };
+	
+	  (function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = 'https://connect.facebook.net/en_GB/sdk/xfbml.customerchat.js';
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	<!-- Your customer chat code -->
+	<div class="fb-customerchat"
+	  attribution=setup_tool
+	  page_id="192490631404807"
+	  theme_color="#ff7e29">
+	</div>
