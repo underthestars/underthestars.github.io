@@ -4,5 +4,7 @@
 
 footer a{text-decoration: none !important; color: #6c757d !important}
 footer a:hover{color: #f4952a !important}
+.text-dark-link{text-decoration: none !important; color: #6c757d !important}
+.text-dark-link:hover{color: #f4952a !important}
 
 blockquote>p:before{content:none !important}.blockquote>p:after{content:none !important}
