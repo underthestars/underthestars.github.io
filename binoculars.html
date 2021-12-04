@@ -1,0 +1,138 @@
+---
+layout: default
+title: Buy some Binoculars | Under The Stars | Astronomy Tours in the Wairarapa
+theme: light
+---
+
+<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+    <!-- VOUCHERS -->
+    <article class="pt-10 pt-md-12">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6 text-center">
+
+            <!-- Preheading -->
+            <h6 class="text-xs text-primary">
+              Binoculars
+            </h6>
+
+            <!-- Heading -->
+            <h1 class="display-2 mb-4">
+              High quality light-weight binoculars, perfect for exploring the night sky.
+            </h1>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+
+            <!-- Image -->
+            <figure class="mb-6 text-center">
+              <img class="img-fluid" src="/assets/img/Binoculars.jpg" alt="Binoculars">
+            </figure>
+
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8">
+
+            <!-- Heading -->
+            <h2 class="fw-bold mt-6 mb-3">
+              Why these?
+            </h2>
+
+            <!-- Text -->
+						<p>
+              These quality 50mm optics and anti-reflection coatings give you a bright view with a wide field of view for stargazing. Focussing is easy and precise. Images are clear and sharp.</p>
+            <p>
+              The 10x magnification is enough for hand-held binoculars.
+						</p>
+
+						<p>	
+							These binoculars are perfect for beginners but also more experienced stargazers, to see the Moon, Jupiter’s moons, globular and open clusters like Matariki. 
+						</p>
+						<p>
+						  Only $119 inculding shipping to anywhere with New Zealand, these binoculars are a great present, a first step into this fascinating hobby or for more experienced stargazers who need something light and portable.
+            </p>
+            <p class="mb-6">
+							(On purchase you will be taken to our payment processor Stripe, if you want to talk about other ways to pay then <a href="/contact-us/">Contact us here</a>.)
+						</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <section class="pb-md-9 overflow-hidden" id="purchase">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <!-- Slider -->
+            <div class="flickity-viewport-visible" data-flickity='{"cellAlign": "left", "contain": true, "imagesLoaded": true, "pageDots": false}'>
+              {% for item in site.data.store %}
+              {% if item.filter == 'item' %}
+              <div class="w-100 px-2" id="{{ item.id }}" style="max-width: 320px;">
+
+                <!-- Card -->
+                <div class="card border-0">
+
+                  <!-- Image -->
+                  <img class="card-img-top" src="{{item.image}}" alt="{{ item.name }}" />
+
+                  <!-- Body -->
+                  <div class="card-body">
+
+                    <!-- Heading -->
+                    <div class="row mb-2">
+                      <div class="col">
+                        <h5 class="mb-0">Buy a {{ item.name }}</h5>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 font-serif text-black">${{ item.cost }}</span>
+                      </div>
+                    </div>
+
+                    <!-- Text -->
+                    <p class="mb-0">
+                      {{ item.description }}
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+              {% endif %}
+              {% endfor %}
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      (function() {
+        var stripe = Stripe('pk_live_gp6RjAX7u2RHERY9rgwd71Df00KOZTJ8XM');
+      
+        var checkoutButton = document.getElementById('checkout-button-sku_KiJa5mUSm0KZQo');
+        checkoutButton.addEventListener('click', function () {
+          stripe.redirectToCheckout({
+            items: [{sku: 'sku_KiJa5mUSm0KZQo', quantity: 1}],
+            successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
+            cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',
+          shippingAddressCollection: {
+            allowedCountries: ['NZ'],
+          }
+          })
+          .then(function (result) {
+            if (result.error) {
+              var displayError = document.getElementById('error-message');
+              displayError.textContent = result.error.message;
+            }
+          });
+        });
+      
+      })();
+      </script>
+      
