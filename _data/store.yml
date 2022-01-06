@@ -26,8 +26,8 @@
   name: Astonomical <strong>Binoculars</strong>
   image: /assets/img/BinosShop.jpg
   filter: item
-  cost: Sold Out
-  id:
+  cost: 119
+  id: checkout-button-sku_KiJa5mUSm0KZQo
 - description: Limited Edition Under The Stars Dark Chocolate in collaboration with Schoc Chocolate.
   name: 100g Dark Chocolate Bar
   image: /assets/img/choc.jpg
