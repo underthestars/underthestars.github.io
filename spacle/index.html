@@ -101,7 +101,7 @@
         .appendTo("body")
         .css("display", "none");
       $("#object")
-        .delay(1500)
+        .delay(2000)
         .fadeOut("slow", function () {
           $("#object").attr(
             "src",
@@ -145,6 +145,9 @@
         );
       } else if ($guess.toLowerCase() == "tatooine") {
         $("#confirmation").html("Tatooine is in a galaxy far, far away.");
+        $distance = null;
+      } else if ($guess.toLowerCase() == "") {
+        $("#confirmation").html("Enter a guess in the box below");
         $distance = null;
       } else if ($distance == null) {
         $("#confirmation").html($guess + " is not a proper guess.");
