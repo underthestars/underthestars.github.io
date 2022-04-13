@@ -89,6 +89,7 @@
                   >
                 </div>
                 <button
+                  id="action"
                   class="w-100 mb-2 btn btn-lg rounded-4 btn-primary"
                   type="submit"
                 >
@@ -117,6 +118,8 @@
   <script>
     $.getJSON("spacle.json", function (result) {
       $objects = result;
+      $try = 0;
+      $status = "guessing";
       $object = result[Math.floor(Math.random() * result.length)];
 
       $("<img />")
@@ -156,6 +159,7 @@
 
     $("form").submit(function (e) {
       $distance = null;
+      $try++;
       $guess = $("#floatingInput")
         .val()
         .replace(/[^a-z\s]/gi, "")
@@ -165,30 +169,54 @@
           $distance = Math.abs(val.AU - $object.AU);
         }
       });
-      if ($object.label.toLowerCase() == $guess.toLowerCase()) {
-        $("#confirmation").html(
-          "<strong>" + $object.label + " is Correct!</strong>"
-        );
-      } else if ($guess.toLowerCase() == "tatooine") {
-        $("#confirmation").html("Tatooine is in a galaxy far, far away.");
-        $distance = null;
-      } else if ($guess.toLowerCase() == "") {
-        $("#confirmation").html("Enter a guess in the box below");
-        $distance = null;
-      } else if ($distance == null) {
-        $("#confirmation").html($guess + " is not a proper guess.");
-        $distance = null;
+
+      if ($status == "guessing") {
+        if ($object.label.toLowerCase() == $guess.toLowerCase()) {
+          $("#confirmation").html(
+            "<strong>" +
+              $object.label +
+              " is Correct! You guessed in " +
+              $try +
+              ".</strong>"
+          );
+          $status = "guessed";
+          $("#action").html("Share");
+        } else if ($guess.toLowerCase() == "tatooine") {
+          $("#confirmation").html("Tatooine is in a galaxy far, far away.");
+          $distance = null;
+        } else if ($guess.toLowerCase() == "") {
+          $("#confirmation").html("Enter a guess in the box below");
+          $distance = null;
+        } else if ($distance == null) {
+          $("#confirmation").html($guess + " is not a proper guess.");
+          $distance = null;
+        } else {
+          $("#confirmation").html(
+            "Wrong: " +
+              $guess +
+              " is " +
+              $distance +
+              "au away from this one, try again."
+          );
+          $distance = null;
+        }
       } else {
-        $("#confirmation").html(
-          "Wrong: " +
-            $guess +
-            " is " +
-            $distance +
-            "au away from this one, try again."
-        );
-        $distance = null;
+        if (navigator.share) {
+          navigator
+            .share({
+              title: 'Spacle by Under The Stars',
+              text: "I completed Spacle in " + $try + "!",
+              url: "https://www.underthestars.co.nz/spacle",
+            })
+            .then(() => {
+              console.log("Thanks for sharing!");
+            })
+            .catch(console.error);
+        }
       }
+
       $("#floatingInput").val("");
+      console.log($status + ": " + $try);
       return false;
     });
   </script>
