@@ -1,34 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
   <!--[if IE 3]>
-
-              `..::++++++++++++::..`              
-           .-//++++++++/::/++++++++//-.           
-        `:/+++++:-.`          `.-:+++++/:`        
-      `:/+++/-.`                  `.-/+++/:`      
-    `:/++//-      `        `/-...`    -//++/:`    
-   ./+++/.        /`       -+++:`       ./+++/.   
-  -+++/-         -/:`     ..`-/`          -/+++-  
- ./+++-        ./+++/-        `            -+++/. 
-`/++/.     ..-/+++.:++/:::`                 ./++/`
-:+++:        .-:++/++/-`                     :+++:
-++++`           `:++.                        `++++
-+++/`             /-                         `/+++
-+++-     .:--``   ``                          -+++
-+++/`    /++++/`                             `/+++
-++++`  `-/+++/.                              `++++
-:+++:     ..-`                               :+++:
-`/++/.                                      ./++/`
- ./+++-                                    -+++/. 
-  -+++/-                                  -/+++-  
-   ./+++/.                              ./+++/.   
-    `:/++//-                          -//++/:`    
-      `:/+++/-.`                  `.-/+++/:`      
-        `:/+++++:-.`          `.-:+++++/:`        
-           .-//++++++++/::/++++++++//-.           
-              `..::++++++++++++::..`              
-
-<![endif]-->
+    `..::++++++++++++::..` .-//++++++++/::/++++++++//-. `:/+++++:-.`
+    `.-:+++++/:` `:/+++/-.` `.-/+++/:` `:/++//- ` `/-...` -//++/:` ./+++/. /`
+    -+++:` ./+++/. -+++/- -/:` ..`-/` -/+++- ./+++- ./+++/- ` -+++/. `/++/.
+    ..-/+++.:++/:::` ./++/` :+++: .-:++/++/-` :+++: ++++` `:++. `++++ +++/` /-
+    `/+++ +++- .:--`` `` -+++ +++/` /++++/` `/+++ ++++` `-/+++/. `++++ :+++:
+    ..-` :+++: `/++/. ./++/` ./+++- -+++/. -+++/- -/+++- ./+++/. ./+++/.
+    `:/++//- -//++/:` `:/+++/-.` `.-/+++/:` `:/+++++:-.` `.-:+++++/:`
+    .-//++++++++/::/++++++++//-. `..::++++++++++++::..`
+  <![endif]-->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,6 +33,19 @@
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet" />
 
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-22038364-3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-22038364-3");
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script
       src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
@@ -162,7 +156,10 @@
 
     $("form").submit(function (e) {
       $distance = null;
-      $guess = $("#floatingInput").val().replace(/[^a-z\s]/gi, '').trim();
+      $guess = $("#floatingInput")
+        .val()
+        .replace(/[^a-z\s]/gi, "")
+        .trim();
       $.each($objects, function (i, val) {
         if ($guess.toLowerCase() == val.label.toLowerCase()) {
           $distance = Math.abs(val.AU - $object.AU);
@@ -183,11 +180,15 @@
         $distance = null;
       } else {
         $("#confirmation").html(
-          "Wrong: " + $guess + " is " + $distance + "au away from this one, try again."
+          "Wrong: " +
+            $guess +
+            " is " +
+            $distance +
+            "au away from this one, try again."
         );
         $distance = null;
       }
-      $("#floatingInput").val('');
+      $("#floatingInput").val("");
       return false;
     });
   </script>
