@@ -134,10 +134,10 @@ theme: light
       (function() {
         var stripe = Stripe('pk_live_51LJDF4GzHckhqGK034oaGgaRB466qFtNnEltpyUinoG4Pv9psv7R5MFw7FpHAZu9Yw1LQ77KDyruaOlXXrLfJOBK00YpGbVyni');
       
-        var checkoutButton = document.getElementById('checkout-button-sku_H7fd6q2r022Egl');
+        var checkoutButton = document.getElementById('checkout-button-prod_M1y1QSUbTY0XzR');
         checkoutButton.addEventListener('click', function () {
           stripe.redirectToCheckout({
-            items: [{sku: 'sku_H7fd6q2r022Egl', quantity: 1}],
+            items: [{sku: 'prod_M1y1QSUbTY0XzR', quantity: 1}],
             successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
             cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',
           shippingAddressCollection: {
