@@ -134,14 +134,15 @@ theme: light
       (function() {
         var stripe = Stripe('pk_live_51LJDF4GzHckhqGK034oaGgaRB466qFtNnEltpyUinoG4Pv9psv7R5MFw7FpHAZu9Yw1LQ77KDyruaOlXXrLfJOBK00YpGbVyni');
       
-        var checkoutButton = document.getElementById('checkout-button-prod_M1y1QSUbTY0XzR');
+        var checkoutButton = document.getElementById('checkout-button-price_1LKK0PGzHckhqGK0tk30vKNx');
         checkoutButton.addEventListener('click', function () {
           stripe.redirectToCheckout({
-            items: [{sku: 'prod_M1y1QSUbTY0XzR', quantity: 1}],
+            lineItems: [{price: 'price_1LKK0PGzHckhqGK0tk30vKNx', quantity: 1}],
+            mode: 'payment',
             successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
             cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',
           shippingAddressCollection: {
-            allowedCountries: ['NZ'],
+            allowedCountries: ['NZ','AU'],
           }
           })
           .then(function (result) {
@@ -152,14 +153,15 @@ theme: light
           });
         });
       
-        var checkoutButton = document.getElementById('checkout-button-sku_H7fcwkE87vaOdN');
+        var checkoutButton = document.getElementById('checkout-button-price_1LKK0cGzHckhqGK0gtPhBGH2');
         checkoutButton.addEventListener('click', function () {
           stripe.redirectToCheckout({
-            items: [{sku: 'sku_H7fcwkE87vaOdN', quantity: 1}],
+            lineItems: [{price: 'price_1LKK0cGzHckhqGK0gtPhBGH2', quantity: 1}],
+            mode: 'payment',
             successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
             cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',
           shippingAddressCollection: {
-            allowedCountries: ['NZ'],
+            allowedCountries: ['NZ','AU'],
           }
           })
           .then(function (result) {
@@ -170,14 +172,15 @@ theme: light
           });
         });
       
-        var checkoutButton = document.getElementById('checkout-button-sku_H7fbDw3YGy2AZ3');
+        var checkoutButton = document.getElementById('checkout-button-price_1LKK0kGzHckhqGK0CCkdz4Cv');
         checkoutButton.addEventListener('click', function () {
           stripe.redirectToCheckout({
-            items: [{sku: 'sku_H7fbDw3YGy2AZ3', quantity: 1}],
+            lineItems: [{price: 'price_1LKK0kGzHckhqGK0CCkdz4Cv', quantity: 1}],
+            mode: 'payment',
             successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
             cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',
           shippingAddressCollection: {
-            allowedCountries: ['NZ'],
+            allowedCountries: ['NZ','AU'],
           }
           })
           .then(function (result) {
@@ -188,14 +191,15 @@ theme: light
           });
         });
       
-        var checkoutButton = document.getElementById('checkout-button-sku_GKIKwDQoPmJk4j');
+        var checkoutButton = document.getElementById('checkout-button-price_1LKK0sGzHckhqGK0iJHIksSx');
         checkoutButton.addEventListener('click', function () {
           stripe.redirectToCheckout({
-            items: [{sku: 'sku_GKIKwDQoPmJk4j', quantity: 1}],
+            lineItems: [{price: 'price_1LKK0sGzHckhqGK0iJHIksSx', quantity: 1}],
+            mode: 'payment',
             successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
             cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',
           shippingAddressCollection: {
-            allowedCountries: ['NZ'],
+            allowedCountries: ['NZ','AU'],
           }
           })
           .then(function (result) {
