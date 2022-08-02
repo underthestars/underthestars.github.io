@@ -1,6 +1,11 @@
 .h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{font-family: 'Fjalla One', sans-serif}
 
 .text-yellow{color: #fad549}
+.text-blue{color: #D3E1E5}
+.text-chris{color: #88999D}
+.text-one{color: #84BABB}
+.text-two{color: }
+.text-three{color: }
 
 footer a{text-decoration: none !important; color: #6c757d !important}
 footer a:hover{color: #f4952a !important}
