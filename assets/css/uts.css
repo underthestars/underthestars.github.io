@@ -3,6 +3,8 @@
 .text-yellow{color: #fad549}
 .text-blue{color: #46a2db}
 
+.btn-blue{color: #46a2db; border-color: #46a2db;}
+
 footer a{text-decoration: none !important; color: #6c757d !important}
 footer a:hover{color: #f4952a !important}
 .text-dark-link{text-decoration: none !important; color: #6c757d !important}
