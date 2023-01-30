@@ -105,7 +105,7 @@ theme: light
                     <!-- Heading -->
                     <div class="row mb-2">
                       <div class="col">
-                        <h5 class="mb-0">Buy a {{ item.name }}</h5>
+                        <h5 class="mb-0">Buy {{ item.name }}</h5>
                       </div>
                       <div class="col-auto">
                         <span class="fs-4 font-serif text-black">${{ item.cost }}</span>
@@ -195,6 +195,25 @@ theme: light
         checkoutButton.addEventListener('click', function () {
           stripe.redirectToCheckout({
             lineItems: [{price: 'price_1LKK0sGzHckhqGK0iJHIksSx', quantity: 1}],
+            mode: 'payment',
+            successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
+            cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',
+          shippingAddressCollection: {
+            allowedCountries: ['NZ','AU'],
+          }
+          })
+          .then(function (result) {
+            if (result.error) {
+              var displayError = document.getElementById('error-message');
+              displayError.textContent = result.error.message;
+            }
+          });
+        });
+
+        var checkoutButton = document.getElementById('checkout-button-price_1MVqoLGzHckhqGK0CowQNqsJ');
+        checkoutButton.addEventListener('click', function () {
+          stripe.redirectToCheckout({
+            lineItems: [{price: 'price_1MVqoLGzHckhqGK0CowQNqsJ', quantity: 1}],
             mode: 'payment',
             successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
             cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',

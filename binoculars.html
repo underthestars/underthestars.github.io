@@ -54,7 +54,7 @@ theme: light
 							These binoculars are perfect for beginners but also more experienced stargazers, to see the Moon, Jupiter’s moons, globular and open clusters like Matariki. 
 						</p>
 						<p>
-						  Only $119 inculding shipping to anywhere with New Zealand, these binoculars are a great present, a first step into this fascinating hobby or for more experienced stargazers who need something light and portable.
+						  Only $125 inculding shipping to anywhere with New Zealand, these binoculars are a great present, a first step into this fascinating hobby or for more experienced stargazers who need something light and portable.
             </p>
             <p class="mb-6">
 							(On purchase you will be taken to our payment processor Stripe, if you want to talk about other ways to pay then <a href="/contact-us/">Contact us here</a>.)
@@ -68,7 +68,7 @@ theme: light
         <div class="row">
           <div class="col-12">
             <!-- Slider -->
-            <div class="flickity-viewport-visible" data-flickity='{"cellAlign": "left", "contain": true, "imagesLoaded": true, "pageDots": false}'>
+            <div class="flickity-viewport-visible" data-flickity='{"cellAlign": "center", "contain": true, "imagesLoaded": true, "pageDots": false}'>
               {% for item in site.data.store %}
               {% if item.filter == 'item' %}
               <div class="w-100 px-2" id="{{ item.id }}" style="max-width: 320px;">
@@ -85,7 +85,7 @@ theme: light
                     <!-- Heading -->
                     <div class="row mb-2">
                       <div class="col">
-                        <h5 class="mb-0">Buy a {{ item.name }}</h5>
+                        <h5 class="mb-0">Buy {{ item.name }}</h5>
                       </div>
                       <div class="col-auto">
                         <span class="fs-4 font-serif text-black">${{ item.cost }}</span>
@@ -113,16 +113,17 @@ theme: light
 
     <script>
       (function() {
-        var stripe = Stripe('pk_live_51LJDF4GzHckhqGK034oaGgaRB466qFtNnEltpyUinoG4Pv9psv7R5MFw7FpHAZu9Yw1LQ77KDyruaOlXXrLfJOBK00YpGbVyni');
+         var stripe = Stripe('pk_live_51LJDF4GzHckhqGK034oaGgaRB466qFtNnEltpyUinoG4Pv9psv7R5MFw7FpHAZu9Yw1LQ77KDyruaOlXXrLfJOBK00YpGbVyni');
       
-        var checkoutButton = document.getElementById('checkout-button-sku_KiJa5mUSm0KZQo');
+        var checkoutButton = document.getElementById('checkout-button-price_1MVqoLGzHckhqGK0CowQNqsJ');
         checkoutButton.addEventListener('click', function () {
           stripe.redirectToCheckout({
-            items: [{sku: 'sku_KiJa5mUSm0KZQo', quantity: 1}],
+            lineItems: [{price: 'price_1MVqoLGzHckhqGK0CowQNqsJ', quantity: 1}],
+            mode: 'payment',
             successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
             cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',
           shippingAddressCollection: {
-            allowedCountries: ['NZ'],
+            allowedCountries: ['NZ','AU'],
           }
           })
           .then(function (result) {
