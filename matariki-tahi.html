@@ -1,0 +1,125 @@
+---
+layout: default
+title: Buy some Binoculars | Under The Stars | Astronomy Tours in the Wairarapa
+theme: light
+---
+
+<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+    <!-- VOUCHERS -->
+    <article class="pt-10 pt-md-12">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6 text-center">
+
+            <!-- Preheading -->
+            <h6 class="text-xs text-primary">
+              Print Gallery
+            </h6>
+
+            <!-- Heading -->
+            <h1 class="display-2 mb-4">
+              Matariki Tahi
+            </h1>
+
+          </div>
+        </div>
+        <div class="row">          
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8">
+         
+            <!-- Text -->
+						<p>
+              The star cluster known in Aotearoa as Matariki, rises above a mountain peak as seen from the riverbed of the Godley Valley, north of Lake Tekapo.
+            </p>             
+          </div>
+          <div class="col-12 col-md-10 col-lg-8"">
+
+            <!-- Image -->
+            <figure class="mb-6 text-center">
+              <img class="img-fluid" src="/assets/img/photography/Matariki_Tahi.jpg" alt="Matariki">
+            </figure>
+            <p class="mb-6">
+              On purchase you will be taken to our payment processor Stripe, if you want to talk about other ways to pay or other print size options then <a href="/contact-us/">Contact us here</a>.
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </article>
+    <section class="pb-md-9 overflow-hidden" id="purchase">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <!-- Slider -->
+            <div class="flickity-viewport-visible" data-flickity='{"cellAlign": "center", "contain": true, "imagesLoaded": true, "pageDots": false}'>
+              {% for item in site.data.store %}
+              {% if item.filter == 'print' %}
+              <div class="w-100 px-2" id="{{ item.id }}" style="max-width: 320px;">
+
+                <!-- Card -->
+                <div class="card border-0">
+
+                  <!-- Image -->
+<!--                  <img class="card-img-top" src="{{item.image}}" alt="{{ item.name }}" />-->
+
+                  <!-- Body -->
+                  <div class="card-body">
+
+                    <!-- Heading -->
+                    <div class="row mb-2">
+                      <div class="col">
+                        <h5 class="mb-0">Buy {{ item.name }}</h5>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 font-serif text-black">${{ item.cost }}</span>
+                      </div>
+                    </div>
+
+                    <!-- Text -->
+                    <p class="mb-0">
+                      {{ item.description }}
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+              {% endif %}
+              {% endfor %}              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      (function() {
+         var stripe = Stripe('pk_live_51LJDF4GzHckhqGK034oaGgaRB466qFtNnEltpyUinoG4Pv9psv7R5MFw7FpHAZu9Yw1LQ77KDyruaOlXXrLfJOBK00YpGbVyni');
+      
+        var checkoutButton = document.getElementById('checkout-button-price_1MVqoLGzHckhqGK0CowQNqsJ');
+        checkoutButton.addEventListener('click', function () {
+          stripe.redirectToCheckout({
+            lineItems: [{price: 'price_1MVqoLGzHckhqGK0CowQNqsJ', quantity: 1}],
+            mode: 'payment',
+            successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
+            cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',
+          shippingAddressCollection: {
+            allowedCountries: ['NZ','AU'],
+          }
+          })
+          .then(function (result) {
+            if (result.error) {
+              var displayError = document.getElementById('error-message');
+              displayError.textContent = result.error.message;
+            }
+          });
+        });
+      
+      })();
+      </script>
+      

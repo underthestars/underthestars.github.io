@@ -28,3 +28,9 @@
   filter: item
   cost: 125
   id: checkout-button-price_1MVqoLGzHckhqGK0CowQNqsJ
+- description: Size A2 with mat.
+  name: <strong> Matariki Tahi </strong>
+  image: /assets/img/photography/Matariki_Tahi.jpg
+  filter: print
+  cost: 999
+  id: checkout-button-price_matariki_1
