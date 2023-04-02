@@ -28,21 +28,3 @@
   filter: item
   cost: 125
   id: checkout-button-price_1MVqoLGzHckhqGK0CowQNqsJ
-- description: Fine art print on archivel grade paper.
-  detail_1: A2 Matte border (50mm)
-  detail_2: A2 Foamboard backing
-  detail_3: Ready for the frame of your choice.
-  name: <strong> Matariki Tahi </strong>
-  image: /assets/img/photography/Matariki_Tahi.jpg
-  filter: matariki
-  cost: 225
-  id: checkout-button-price_matariki
-- description: Fine art print on archivel grade paper.
-  detail_1: A2 Matte border (50mm)
-  detail_2: A2 Foamboard backing
-  detail_3: Ready for the frame of your choice.
-  name: <strong> Ōnoke Sunset </strong>
-  image: /assets/img/photography/Onoke_Sunset.jpg
-  filter: onoke
-  cost: 225
-  id: checkout-button-price_onoke_suset

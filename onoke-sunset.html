@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Buy some Binoculars | Under The Stars | Astronomy Tours in the Wairarapa
+title: Buy some prints | Under The Stars | Astronomy Tours in the Wairarapa
 theme: light
 ---
 
@@ -55,7 +55,7 @@ theme: light
           <div class="col-12">
             <!-- Slider -->
             <div class="flickity-viewport-visible" data-flickity='{"cellAlign": "center", "contain": true, "imagesLoaded": true, "pageDots": false}'>
-              {% for item in site.data.store %}
+              {% for item in site.data.print-store %}
               {% if item.filter == 'onoke' %}
               <div class="w-100 px-2" id="{{ item.id }}" style="max-width: 320px;">
 
@@ -84,12 +84,6 @@ theme: light
                     </p>
                     <p class="mb-0">
                       - {{ item.detail_1}}
-                    </p>
-                    <p class="mb-0">
-                      - {{ item.detail_2}}
-                    </p>
-                    <p class="mb-0">
-                      - {{ item.detail_3}}
                     </p>
                   </div>
 
