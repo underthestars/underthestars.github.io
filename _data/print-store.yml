@@ -1,0 +1,62 @@
+- id: checkout-button-price_matariki
+  name: <strong> Matariki Tahi </strong>
+  image: /assets/img/photography/Matariki_Tahi.jpg
+  description: Fine art print on archivel grade paper.
+  detail_1: A2 Matte border (50mm)
+  detail_2: A2 Foamboard backing
+  detail_3: Ready for the frame of your choice.  
+  filter: matariki
+  cost: 225
+- id: checkout-button-price_onoke_suset
+  name: <strong> Ōnoke Sunset </strong>
+  image: /assets/img/photography/Onoke_Sunset.jpg
+  description: Photographic Paper (Ilford Pearl).
+  detail_1: A3 Unmounted - Packaged with card.  
+  filter: onoke
+  cost: 65
+- id: checkout-button-price_coastal_Stairways
+  name: <strong> Coastal Stairways </strong>
+  image: /assets/img/photography/Coastal_Stairways.jpg
+  description: Fine art print on archivel grade paper.
+  detail_1: A2 Matte border (50mm)
+  detail_2: A2 Foamboard backing
+  detail_3: Ready for the frame of your choice.  
+  filter: costal-stairways
+  cost: 225
+- id: checkout-button-price_skyfall
+  name: <strong> Skyfall </strong>
+  image: /assets/img/photography/Skyfall.jpg
+  description: Fine art print on archivel grade paper.
+  detail_1: A2 Matte border (50mm)
+  detail_2: A2 Foamboard backing
+  detail_3: Ready for the frame of your choice.  
+  filter: skyfall
+  cost: 225
+- id: checkout-button-price_jewels-southern-sky
+  name: <strong> Jewels of The Southern Sky </strong >
+  image: /assets/img/photography/Jewels_Of_The_Southern_Sky.jpg
+  description: Photographic Paper (Ilford Pearl).
+  detail_1: A3 Unmounted - Packaged with card.  
+  filter: jewels-southern
+  cost: 65
+- id: checkout-button-price_sky_bridge
+  name: <strong> Sky Bridge II </strong >
+  image: /assets/img/photography/Sky_Bridge.jpg
+  description: Photographic Paper (Ilford Pearl).
+  detail_1: A2 Matte border (50mm) mounted    
+  filter: sky-bridge
+  cost: 135
+- id: checkout-button-price_layers_of_time
+  name: <strong> Layers Of Time </strong >
+  image: /assets/img/photography/Rock_Wave.jpg
+  description: Photographic Paper (Ilford Pearl).
+  detail_1: A3 Unmounted - Packaged with card.  
+  filter: layers-of-time
+  cost: 65
+- id: checkout-button-price_aoraki_show
+  name: <strong> The Aoraki Show </strong >
+  image: /assets/img/photography/The_Aoraki_Show.jpg
+  description: Photographic Paper (Ilford Smooth Pearl).
+  detail_1: A2 Matte mounted.  
+  filter: aoraki-show
+  cost: 135
