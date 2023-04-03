@@ -109,10 +109,10 @@ theme: light
       (function() {
          var stripe = Stripe('pk_live_51LJDF4GzHckhqGK034oaGgaRB466qFtNnEltpyUinoG4Pv9psv7R5MFw7FpHAZu9Yw1LQ77KDyruaOlXXrLfJOBK00YpGbVyni');
       
-        var checkoutButton = document.getElementById('checkout-button-price_1MVqoLGzHckhqGK0CowQNqsJ');
+        var checkoutButton = document.getElementById('checkout-button-price_1MsjVDGzHckhqGK0npzz33IY');
         checkoutButton.addEventListener('click', function () {
           stripe.redirectToCheckout({
-            lineItems: [{price: 'price_1MVqoLGzHckhqGK0CowQNqsJ', quantity: 1}],
+            lineItems: [{price: 'price_1MsjVDGzHckhqGK0npzz33IY', quantity: 1}],
             mode: 'payment',
             successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
             cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',

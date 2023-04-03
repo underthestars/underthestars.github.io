@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Buy some prints | Under The Stars | Astronomy Tours in the Wairarapa
+title: Buy some Prints | Under The Stars | Astronomy Tours in the Wairarapa
 theme: light
 ---
 
@@ -20,7 +20,7 @@ theme: light
 
             <!-- Heading -->
             <h1 class="display-2 mb-4">
-              Skyfall
+              Glendhu Dusk 
             </h1>
 
           </div>
@@ -32,14 +32,14 @@ theme: light
          
             <!-- Text -->
 						<p>
-              The milky way core sets behind a frozen waterfall of the Godley Valley.
+              The wild east coast of Wairarapa is rarely calm. Even on days of no wind, the swells can still create crashing waves on the layered rocks. On this day there was barely a breath of wind and sea fog was starting to settle over the beach creating an eerie soft sunset light.
             </p>             
           </div>
           <div class="col-12 col-md-10 col-lg-8"">
 
             <!-- Image -->
             <figure class="mb-6 text-center">
-              <img class="img-fluid" src="/assets/img/photography/Skyfall.jpg" alt="Skyfall">
+              <img class="img-fluid" src="/assets/img/photography/Glendhu_Dusk.jpg" alt="Glendhu Dusk">
             </figure>
             <p class="mb-6">
               On purchase you will be taken to our payment processor Stripe, if you want to talk about other ways to pay or other print size options then <a href="/contact-us/">Contact us here</a>.
@@ -56,8 +56,8 @@ theme: light
             <!-- Slider -->
             <div class="flickity-viewport-visible" data-flickity='{"cellAlign": "center", "contain": true, "imagesLoaded": true, "pageDots": false}'>
               {% for item in site.data.print-store %}
-              {% if item.filter == 'skyfall' %}
-              <div class="w-100 px-2" id="{{ item.id }}" style="max-width: 320px;">
+              {% if item.filter == 'glendhu-dusk' %}
+              <div class="w-100 px-2" id="{{ item.id }}" style="max-width: 350px;">
 
                 <!-- Card -->
                 <div class="card border-0">
@@ -85,12 +85,7 @@ theme: light
                     <p class="mb-0">
                       - {{ item.detail_1}}
                     </p>
-                    <p class="mb-0">
-                      - {{ item.detail_2}}
-                    </p>
-                    <p class="mb-0">
-                      - {{ item.detail_3}}
-                    </p>
+                    
                   </div>
 
                 </div>
@@ -109,10 +104,10 @@ theme: light
       (function() {
          var stripe = Stripe('pk_live_51LJDF4GzHckhqGK034oaGgaRB466qFtNnEltpyUinoG4Pv9psv7R5MFw7FpHAZu9Yw1LQ77KDyruaOlXXrLfJOBK00YpGbVyni');
       
-        var checkoutButton = document.getElementById('checkout-button-price_1MVqoLGzHckhqGK0CowQNqsJ');
+        var checkoutButton = document.getElementById('checkout-button-price_1MslGvGzHckhqGK0w51FTBJM');
         checkoutButton.addEventListener('click', function () {
           stripe.redirectToCheckout({
-            lineItems: [{price: 'price_1MVqoLGzHckhqGK0CowQNqsJ', quantity: 1}],
+            lineItems: [{price: 'price_1MslGvGzHckhqGK0w51FTBJM', quantity: 1}],
             mode: 'payment',
             successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
             cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',

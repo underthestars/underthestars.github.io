@@ -29,3 +29,12 @@ transition: color .1s;
     margin-top: -10px;
     color:black;
 }
+
+.buy-saddle-print{
+    float:right;
+    font-weight:bold;
+    font-family: 'Fjalla One', sans-serif;
+    padding-right: 280px;    
+    margin-top: -10px;
+    color:black;
+}

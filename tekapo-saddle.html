@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Buy some prints | Under The Stars | Astronomy Tours in the Wairarapa
+title: Buy some Prints | Under The Stars | Astronomy Tours in the Wairarapa
 theme: light
 ---
 
@@ -20,9 +20,8 @@ theme: light
 
             <!-- Heading -->
             <h1 class="display-2 mb-4">
-              Ōnoke Sunset
+              Tekapo Saddle
             </h1>
-
           </div>
         </div>
         <div class="row">          
@@ -32,14 +31,14 @@ theme: light
          
             <!-- Text -->
 						<p>
-              Ōnoke (Lake Ferry) lies at the southern coast of the Wairarapa region and spills directly into the ocean. At times in the past it has been isolated as an inland lake. This photo was taken looking south towards the lake and southern Rēmutaka ranges. With the sun setting southwest in summer, it is a great site for viewing some spectacular sunsets.
+              This image won the landscape category of New Zealand Geographic Photographer Of The Year Awards 2018. It features Tekapo Saddle, of the Two Thumb Range of mountains to the east of Lake Tekapo. A phenomenon which usually occurs under clear skies, this image was taken under moonlight after a snow storm. A two-minute exposure at 135mm.
             </p>             
           </div>
           <div class="col-12 col-md-10 col-lg-8"">
 
             <!-- Image -->
             <figure class="mb-6 text-center">
-              <img class="img-fluid" src="/assets/img/photography/Onoke_Sunset.jpg" alt="Ōnoke Sunset">
+              <img class="img-fluid" src="/assets/img/photography/Tekapo_Saddle.jpg" alt="Tekapo Saddle">
             </figure>
             <p class="mb-6">
               On purchase you will be taken to our payment processor Stripe, if you want to talk about other ways to pay or other print size options then <a href="/contact-us/">Contact us here</a>.
@@ -56,8 +55,8 @@ theme: light
             <!-- Slider -->
             <div class="flickity-viewport-visible" data-flickity='{"cellAlign": "center", "contain": true, "imagesLoaded": true, "pageDots": false}'>
               {% for item in site.data.print-store %}
-              {% if item.filter == 'onoke' %}
-              <div class="w-100 px-2" id="{{ item.id }}" style="max-width: 320px;">
+              {% if item.filter == 'tekapo-saddle' %}
+              <div class="w-100 px-2" id="{{ item.id }}" style="max-width: 400px;">
 
                 <!-- Card -->
                 <div class="card border-0">
@@ -85,6 +84,12 @@ theme: light
                     <p class="mb-0">
                       - {{ item.detail_1}}
                     </p>
+                    <p class="mb-0">
+                      - {{ item.detail_2}}
+                    </p>
+                    <p class="mb-0">
+                      - {{ item.detail_3}}
+                    </p>
                   </div>
 
                 </div>
@@ -103,10 +108,10 @@ theme: light
       (function() {
          var stripe = Stripe('pk_live_51LJDF4GzHckhqGK034oaGgaRB466qFtNnEltpyUinoG4Pv9psv7R5MFw7FpHAZu9Yw1LQ77KDyruaOlXXrLfJOBK00YpGbVyni');
       
-        var checkoutButton = document.getElementById('checkout-button-price_1MsjXbGzHckhqGK0HF5KZCG8');
+        var checkoutButton = document.getElementById('checkout-button-price_1MskfIGzHckhqGK0P2TuijoM');
         checkoutButton.addEventListener('click', function () {
           stripe.redirectToCheckout({
-            lineItems: [{price: 'price_1MsjXbGzHckhqGK0HF5KZCG8', quantity: 1}],
+            lineItems: [{price: 'price_1MskfIGzHckhqGK0P2TuijoM', quantity: 1}],
             mode: 'payment',
             successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
             cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',
