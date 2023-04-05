@@ -70,13 +70,16 @@ theme: light
 						</p>
 						<p>
 						    Gift Vouchers ave available for different durations and we can post your Gift Voucher anywhere within New Zealand.
-						</p>
+						</p>            
 						<p>
 							<a href="/contact-us/">Contact us here</a> to discuss your gift experience and book your special night.
 						</p>
             <h2 class="fw-bold mt-6 mb-3">
               Select an option below.
             </h2>
+            <p>
+              The best environmentally friendly present is a memorable experience. Treat a loved one to a special unique evening with an award-winning stargazing service.
+            </p>
             <p class="mb-6">
 							(On purchase you will be taken to our payment processor Stripe, if you want to talk about other ways to pay then <a href="/contact-us/">Contact us here</a>.)
 						</p>
@@ -91,6 +94,7 @@ theme: light
             <!-- Slider -->
             <div class="flickity-viewport-visible" data-flickity='{"cellAlign": "left", "contain": true, "imagesLoaded": true, "pageDots": false}'>
               {% for item in site.data.store %}
+              {% if item.filter == 'tour' %}
               <div class="w-100 px-2" id="{{ item.id }}" style="max-width: 320px;">
 
                 <!-- Card -->
@@ -114,7 +118,7 @@ theme: light
 
                     <!-- Text -->
                     <p class="mb-0">
-                      {{ item.description }}
+                    <!--  {{ item.description }} -->
                     </p>
 
                   </div>
@@ -122,6 +126,7 @@ theme: light
                 </div>
 
               </div>
+              {% endif %}
               {% endfor %}
             </div>
 

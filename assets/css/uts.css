@@ -20,3 +20,21 @@ letter-spacing: .05em;
 text-transform: uppercase;
 transition: color .1s;
 }
+
+.buy-print{
+    float:right;
+    font-weight:bold;
+    font-family: 'Fjalla One', sans-serif;
+    padding-right: 50px;    
+    margin-top: -10px;
+    color:black;
+}
+
+.buy-saddle-print{
+    float:right;
+    font-weight:bold;
+    font-family: 'Fjalla One', sans-serif;
+    padding-right: 280px;    
+    margin-top: -10px;
+    color:black;
+}
