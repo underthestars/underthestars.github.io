@@ -4,7 +4,8 @@
   description: Fine art print on archival grade paper.
   detail_1: A2 Matte border (50mm)
   detail_2: A2 Foamboard backing
-  detail_3: Ready for the frame of your choice.
+  detail_3: Ready for the frame of your choice
+  detail_4: Includes shipping within NZ
   filter: tekapo-saddle
   cost: 275
 - id: checkout-button-price_1MsjVDGzHckhqGK0npzz33IY
@@ -13,66 +14,75 @@
   description: Fine art print on archival grade paper.
   detail_1: A2 Matte border (50mm)
   detail_2: A2 Foamboard backing
-  detail_3: Ready for the frame of your choice.
+  detail_3: Ready for the frame of your choice
+  detail_4: Includes shipping within NZ
   filter: matariki
-  cost: 225
+  cost: 235
 - id: checkout-button-price_1MsjXbGzHckhqGK0HF5KZCG8
   name: <strong> Ōnoke Sunset </strong>
   image: /assets/img/photography/Onoke_Sunset.jpg
   description: Photographic Paper (Ilford Pearl).
-  detail_1: A3 Unmounted - Packaged with card.  
+  detail_1: A3 Unmounted - Packaged with card
+  detail_2: Includes shipping within NZ
   filter: onoke
-  cost: 65
+  cost: 70
 - id: checkout-button-price_1MsjasGzHckhqGK0uocGOJ4V
   name: <strong> Coastal Stairways </strong>
   image: /assets/img/photography/Coastal_Stairways.jpg
   description: Photographic Paper (Ilford Pearl).
-  detail_1: A3 Unmounted - Packaged with card.  
+  detail_1: A3 Unmounted - Packaged with card
+  detail_2: Includes shipping within NZ
   filter: costal-stairways
-  cost: 65
+  cost: 70
 - id: checkout-button-price_1MsjeIGzHckhqGK0X9OlyXiY
   name: <strong> Skyfall </strong>
   image: /assets/img/photography/Skyfall.jpg
   description: Fine art print on archivel grade paper.
   detail_1: A2 Matte border (50mm)
   detail_2: A2 Foamboard backing
-  detail_3: Ready for the frame of your choice.  
+  detail_3: Ready for the frame of your choice
+  detail_4: Includes shipping within NZ
   filter: skyfall
-  cost: 225
+  cost: 235
 - id: checkout-button-price_1MsjhRGzHckhqGK0YFqKBad2
   name: <strong> Jewels of The Southern Sky </strong >
   image: /assets/img/photography/Jewels_Of_The_Southern_Sky.jpg
   description: Photographic Paper (Ilford Pearl).
-  detail_1: A3 Unmounted - Packaged with card.  
+  detail_1: A3 Unmounted - Packaged with card
+  detail_2: Includes shipping within NZ
   filter: jewels-southern
-  cost: 65
+  cost: 70
 - id: checkout-button-price_1MsjkdGzHckhqGK0mT4qvMRV
   name: <strong> Sky Bridge II </strong >
   image: /assets/img/photography/Sky_Bridge.jpg
   description: Photographic Paper (Ilford Pearl).
-  detail_1: A2 Matte border (50mm) mounted    
+  detail_1: A2 Matte border (50mm) mounted
+  detail_2: Includes shipping within NZ
   filter: sky-bridge
-  cost: 135
+  cost: 145
 - id: checkout-button-price_1MsjwyGzHckhqGK0HPZGSc8T
   name: <strong> Layers Of Time </strong >
   image: /assets/img/photography/Rock_Wave.jpg
   description: Photographic Paper (Ilford Pearl).
-  detail_1: A3 Unmounted - Packaged with card.  
+  detail_1: A3 Unmounted - Packaged with card
+  detail_2: Includes shipping within NZ
   filter: layers-of-time
-  cost: 65
+  cost: 70
 - id: checkout-button-price_1Msjz0GzHckhqGK0ov0nUR8V
   name: <strong> The Aoraki Show </strong >
   image: /assets/img/photography/The_Aoraki_Show.jpg
   description: Fine art print on archival grade paper.
   detail_1: A2 Matte border (50mm)
   detail_2: A2 Foamboard backing
-  detail_3: Ready for the frame of your choice.
+  detail_3: Ready for the frame of your choice
+  detail_4: Includes shipping within NZ
   filter: aoraki-show
-  cost: 225
+  cost: 235
 - id: checkout-button-price_1MslGvGzHckhqGK0w51FTBJM
   name: <strong> Glendhu Dusk </strong >
   image: /assets/img/photography/Glendhu_Dusk.jpg
   description: Photographic Paper (Ilford Pearl).
-  detail_1: A3 Unmounted - Packaged with card.  
+  detail_1: A3 Unmounted - Packaged with card
+  detail_2: Includes shipping within NZ
   filter: glendhu-dusk
-  cost: 65
+  cost: 70
