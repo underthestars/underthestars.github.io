@@ -70,170 +70,49 @@ theme: light
 						</p>
 						<p>
 						    Gift Vouchers ave available for different durations and we can post your Gift Voucher anywhere within New Zealand.
-						</p>            
-						<p>
-							<a href="/contact-us/">Contact us here</a> to discuss your gift experience and book your special night.
 						</p>
-            <h2 class="fw-bold mt-6 mb-3">
-              Select an option below.
-            </h2>
             <p>
               The best environmentally friendly present is a memorable experience. Treat a loved one to a special unique evening with an award-winning stargazing service.
             </p>
+						<p>
+							<a href="/contact-us/">Contact us here</a> to discuss your gift experience and book your special night.
+						</p>
+            <h2 class="fw-bold mt-6 mb-3" id="purchase">
+              Select an option below
+            </h2>
             <p class="mb-6">
 							(On purchase you will be taken to our payment processor Stripe, if you want to talk about other ways to pay then <a href="/contact-us/">Contact us here</a>.)
-						</p>
-          </div>
-        </div>
-      </div>
-    </article>
-    <section class="pb-md-9 overflow-hidden" id="purchase">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <!-- Slider -->
-            <div class="flickity-viewport-visible" data-flickity='{"cellAlign": "left", "contain": true, "imagesLoaded": true, "pageDots": false}'>
-              {% for item in site.data.store %}
-              {% if item.filter == 'tour' %}
-              <div class="w-100 px-2" id="{{ item.id }}" style="max-width: 320px;">
-
-                <!-- Card -->
-                <div class="card border-0">
-
-                  <!-- Image -->
-                  <img class="card-img-top" src="{{item.image}}" alt="{{ item.name }}" />
-
-                  <!-- Body -->
-                  <div class="card-body">
-
-                    <!-- Heading -->
-                    <div class="row mb-2">
-                      <div class="col">
-                        <h5 class="mb-0">Buy {{ item.name }}</h5>
-                      </div>
-                      <div class="col-auto">
-                        <span class="fs-4 font-serif text-black">${{ item.cost }}</span>
-                      </div>
-                    </div>
-
-                    <!-- Text -->
-                    <p class="mb-0">
-                    <!--  {{ item.description }} -->
-                    </p>
-
-                  </div>
-
-                </div>
-
-              </div>
+						</p>            
+            {% for item in site.data.store %}
+              {% if item.filter == 'voucher'%}                                  
+                <button type="button" onclick="voucherCheckout('{{item.id}}')" class="btn btn-blue" value="{{item.id}}">{{item.group_size}} - {{item.price}}</button>
+                <p></p>
               {% endif %}
-              {% endfor %}
+            {% endfor %}         
+            <p></p>
             </div>
-
           </div>
         </div>
-      </div>
-    </section>
 
+      </div>  
+    </article>
+    
     <script>
-      (function() {
+      function voucherCheckout(price_id) {
         var stripe = Stripe('pk_live_51LJDF4GzHckhqGK034oaGgaRB466qFtNnEltpyUinoG4Pv9psv7R5MFw7FpHAZu9Yw1LQ77KDyruaOlXXrLfJOBK00YpGbVyni');
-      
-        var checkoutButton = document.getElementById('checkout-button-price_1LKK0PGzHckhqGK0tk30vKNx');
-        checkoutButton.addEventListener('click', function () {
-          stripe.redirectToCheckout({
-            lineItems: [{price: 'price_1LKK0PGzHckhqGK0tk30vKNx', quantity: 1}],
-            mode: 'payment',
-            successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
-            cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',
-          shippingAddressCollection: {
-            allowedCountries: ['NZ','AU'],
+        stripe.redirectToCheckout({
+          lineItems: [{ price: price_id, quantity: 1 }],
+          mode: 'payment',
+          successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
+          cancelUrl : window.location.protocol + '//www.underthestars.co.nz/cancelled',
+          shippingAddressCollection: { allowedCountries: ['NZ', 'AU'],}
+        })
+        .then(function(result) {
+          if (result.error){
+            var displayError = document.getElementById('error-message');
+            displayError.textContent = result.error.message;
           }
-          })
-          .then(function (result) {
-            if (result.error) {
-              var displayError = document.getElementById('error-message');
-              displayError.textContent = result.error.message;
-            }
-          });
-        });
-      
-        var checkoutButton = document.getElementById('checkout-button-price_1LKK0cGzHckhqGK0gtPhBGH2');
-        checkoutButton.addEventListener('click', function () {
-          stripe.redirectToCheckout({
-            lineItems: [{price: 'price_1LKK0cGzHckhqGK0gtPhBGH2', quantity: 1}],
-            mode: 'payment',
-            successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
-            cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',
-          shippingAddressCollection: {
-            allowedCountries: ['NZ','AU'],
-          }
-          })
-          .then(function (result) {
-            if (result.error) {
-              var displayError = document.getElementById('error-message');
-              displayError.textContent = result.error.message;
-            }
-          });
-        });
-      
-        var checkoutButton = document.getElementById('checkout-button-price_1LKK0kGzHckhqGK0CCkdz4Cv');
-        checkoutButton.addEventListener('click', function () {
-          stripe.redirectToCheckout({
-            lineItems: [{price: 'price_1LKK0kGzHckhqGK0CCkdz4Cv', quantity: 1}],
-            mode: 'payment',
-            successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
-            cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',
-          shippingAddressCollection: {
-            allowedCountries: ['NZ','AU'],
-          }
-          })
-          .then(function (result) {
-            if (result.error) {
-              var displayError = document.getElementById('error-message');
-              displayError.textContent = result.error.message;
-            }
-          });
-        });
-      
-        var checkoutButton = document.getElementById('checkout-button-price_1LKK0sGzHckhqGK0iJHIksSx');
-        checkoutButton.addEventListener('click', function () {
-          stripe.redirectToCheckout({
-            lineItems: [{price: 'price_1LKK0sGzHckhqGK0iJHIksSx', quantity: 1}],
-            mode: 'payment',
-            successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
-            cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',
-          shippingAddressCollection: {
-            allowedCountries: ['NZ','AU'],
-          }
-          })
-          .then(function (result) {
-            if (result.error) {
-              var displayError = document.getElementById('error-message');
-              displayError.textContent = result.error.message;
-            }
-          });
-        });
-
-        var checkoutButton = document.getElementById('checkout-button-price_1MVqoLGzHckhqGK0CowQNqsJ');
-        checkoutButton.addEventListener('click', function () {
-          stripe.redirectToCheckout({
-            lineItems: [{price: 'price_1MVqoLGzHckhqGK0CowQNqsJ', quantity: 1}],
-            mode: 'payment',
-            successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
-            cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',
-          shippingAddressCollection: {
-            allowedCountries: ['NZ','AU'],
-          }
-          })
-          .then(function (result) {
-            if (result.error) {
-              var displayError = document.getElementById('error-message');
-              displayError.textContent = result.error.message;
-            }
-          });
-        });
-      
-      })();
+        });   
+      }      
       </script>
       

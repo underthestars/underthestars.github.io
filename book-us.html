@@ -38,45 +38,35 @@ title: Book Us | Astronomy Tours under the Wairarapa's Dark Sky
               </a>
             </p>
 
-            <h2 class="mb-2">
-              Under The Stars is an award winning nomadic stargazing service in the Wairarapa.
-            </h2>
-
-            <p>
-              We come to you, wherever you are in the region. We specialise in
-              small intimate star party gatherings.
-            </p>
-
-            <p>
-              Our aim is to provide memorable stargazing experiences that
-              inspires, educates and that people will want to recommend. We want
-              to reconnect people with the night sky and continually promote the
-              Dark Sky Movement within the Wairarapa.
-            </p>
-
-            <p>
-              We bring everything you need for a night of stargazing, a huge
-              portable telescope, binoculars, star charts and blankets to keep you
-              warm as you look up. We explain what you can see, stars and
-              constellations and the stories and science they can tell us.
-              Depending on what objects are up that night, we take a closer look
-              at the Moon, planets (if they are in the sky) and some nearby deep
-              sky objects like nebulae, clusters and galaxies. We also use the sky
-              to do some simple celestial navigation.
+            <p class="text-darkblue">
+              We offer a special couples tour at a shorter duration of one hour. This is for any two 
+              people who would like to do a tour together at a reduced price and duration - $195
             </p>
 
             <h2 class="mt-6 mb-2">
-              How long would you like?
+              Our prices
             </h2>
+          
+            {% for item in site.data.store %}
+              {% if item.id != 'price_1Nd7UFGzHckhqGK0nycNXgzZ' %}  
+                <div class="well well-sm">{{item.group_size}} - {{item.price}}</div>    
+              {% endif %}
+            {% endfor %}
+            <p></p>
             <p>
-              Choose a tour for 60 minutes or 90 minutes and are for up to 10
-              people. If you would like a longer tour or more people to come, please get
-              in touch.
+              Our standard tours are 90 minutes in duration. This includes naked-eye presentation, celestial navigation, telescope viewing and Q&A.               
+            </p>
+
+            <p>
+              Prices start at a group size of two for NZ$255 (you can book for one at this base price)               
+            </p>
+            
+            <p>
+              After the base price, each extra person will be $40. <br>
+              Eg. 3 people for $295, 4 people - $340
             </p>
             <p>
-              The best environmentally friendly present is a memorable experience.
-              Treat a loved one to a special unique evening with an award-winning
-              stargazing service.
+              Children under 12 are free and do not count towards your group numbers (Please notify us if you expect more than 2 children) 
             </p>            
             
             <h2 class="mt-6 mb-2">
@@ -89,7 +79,7 @@ title: Book Us | Astronomy Tours under the Wairarapa's Dark Sky
               </a>
             </p>
             <p>
-              * Vouchers are valid for one year and must be redeemed within the
+              * Vouchers are valid for two years and must be redeemed within the
               Wairarapa.
             </p>
 
