@@ -1,41 +1,41 @@
 - id: price_1Nd7UFGzHckhqGK0nycNXgzZ
-  group_size: couple - 60 minutes tour
+  group_size: couple - 60 minutes 
   price: $195
   filter: voucher
 - id: price_1Nd7VGGzHckhqGK0MpoKlx4n
-  group_size: couple - 90 minutes tour
+  group_size: 2 people - 90 minutes 
   price: $255
   filter: voucher
 - id: price_1Nd7bcGzHckhqGK0KnnGVRO0
-  group_size: 3 people - 90 minutes tour
+  group_size: 3 people - 90 minutes 
   price: $295
   filter: voucher
 - id: price_1Nd7hjGzHckhqGK0JgEIzAJe
-  group_size: 4 people - 90 minutes tour
+  group_size: 4 people - 90 minutes 
   price: $335
   filter: voucher
 - id: price_1Nd7ilGzHckhqGK0JlhTISJ9
-  group_size: 5 people - 90 minutes tour
+  group_size: 5 people - 90 minutes 
   price: $375
   filter: voucher
 - id: price_1Nd7kbGzHckhqGK0YmyHS0Tn
-  group_size: 6 people - 90 minutes tour
+  group_size: 6 people - 90 minutes 
   price: $415
   filter: voucher
 - id: price_1Nd7lHGzHckhqGK0mYAiVQ7W
-  group_size: 7 people - 90 minutes tour
+  group_size: 7 people - 90 minutes 
   price: $455
   filter: voucher
 - id: price_1Nd7m4GzHckhqGK0zvr4XRGB
-  group_size: 8 people - 90 minutes tour
+  group_size: 8 people - 90 minutes 
   price: $495
   filter: voucher
 - id: price_1Nd7meGzHckhqGK09Bw8ebsf
-  group_size: 9 people - 90 minutes tour
+  group_size: 9 people - 90 minutes 
   price: $535
   filter: voucher
 - id: price_1Nd7npGzHckhqGK0jRKhS9ho
-  group_size: 10 people - 90 minutes tour
+  group_size: 10 people - 90 minutes 
   price: $575
   filter: voucher
   

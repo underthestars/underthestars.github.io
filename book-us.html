@@ -23,7 +23,7 @@ title: Book Us | Astronomy Tours under the Wairarapa's Dark Sky
     </header>
 
     <!-- CAROUSEL -->
-    <section class="pt-7 pt-md-9">
+    <section class="pt-10 pt-md-12">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-md-8 col-lg-6 text-center">
@@ -32,38 +32,34 @@ title: Book Us | Astronomy Tours under the Wairarapa's Dark Sky
             <p>
               <a
                 href="https://outlook.office365.com/owa/calendar/Booking@underthestars.co.nz/bookings/"
-                class="btn btn-blue"
-              >
-                Book a Private Stargazing Tour Now
+                class="btn btn-blue">
+                Book a Stargazing experience Now
               </a>
             </p>
-
-            <p class="text-darkblue">
-              We offer a special couples tour at a shorter duration of one hour. This is for any two 
-              people who would like to do a tour together at a reduced price and duration - $195
-            </p>
-
-            <h2 class="mt-6 mb-2">
-              Our prices
+            
+            <h2 class="mt-6 mb-2 text-blue">
+              OUR PRICES
             </h2>
-          
+
+           
+            <h4 class="mt-6 mb-2">
+              STARGAZING EXPERIENCES
+            </h4>
+            <p>
+              Our standard experiences are for private groups and are 90 minutes in duration. This includes naked-eye presentation, celestial navigation, telescope viewing and Q&A. <br>
+              Prices start at a group size of two for NZ$235 (you can book for one person at this base price) 
+              After the base price, each extra person will be only $35. <br>
+              
+            </p>               
             {% for item in site.data.store %}
               {% if item.id != 'price_1Nd7UFGzHckhqGK0nycNXgzZ' %}  
                 <div class="well well-sm">{{item.group_size}} - {{item.price}}</div>    
               {% endif %}
-            {% endfor %}
-            <p></p>
-            <p>
-              Our standard tours are 90 minutes in duration. This includes naked-eye presentation, celestial navigation, telescope viewing and Q&A.               
-            </p>
-
-            <p>
-              Prices start at a group size of two for NZ$255 (you can book for one at this base price)               
-            </p>
-            
-            <p>
-              After the base price, each extra person will be $40. <br>
-              Eg. 3 people for $295, 4 people - $340
+            {% endfor %}           
+             <p></p>
+             <p class="text-blue">
+              We offer a special couples experience at a shorter duration of one hour. This is for any two 
+              people who would like to do an experience together - $195
             </p>
             <p>
               Children under 12 are free and do not count towards your group numbers (Please notify us if you expect more than 2 children) 
