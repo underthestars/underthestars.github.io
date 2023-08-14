@@ -1,14 +1,15 @@
 .h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{font-family: 'Fjalla One', sans-serif}
 
-.text-yellow{color: #fad549}
-.text-blue{color: #46a2db}
+.text-yellow{color: #fad549;}
+.text-blue{color: #46a2db;}
 
-.btn-blue{color: #46a2db; border-color: #46a2db;}
+.btn-blue{color: #46a2db; border-color: #46a2db; border-style:double;}
 
 footer a{text-decoration: none !important; color: #6c757d !important}
-footer a:hover{color: #f4952a !important}
-.text-dark-link{text-decoration: none !important; color: #6c757d !important}
-.text-dark-link:hover{color: #f4952a !important}
+footer a:hover{color: #46a2db !important}
+.text-dark-link{text-decoration: none !important; color: #6c757d !important} 
+.text-dark-link:hover{color: #46a2db !important}
+
 
 blockquote>p:before{content:none !important}.blockquote>p:after{content:none !important}
 
@@ -20,6 +21,8 @@ letter-spacing: .05em;
 text-transform: uppercase;
 transition: color .1s;
 }
+
+.dropdown-item:hover{color: #46a2db;}
 
 .buy-print{
     float:right;
