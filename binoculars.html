@@ -59,81 +59,33 @@ theme: light
             <p class="mb-6">
 							(On purchase you will be taken to our payment processor Stripe, if you want to talk about other ways to pay then <a href="/contact-us/" class="text-blue">Contact us here</a>.)
 						</p>
+            {% for item in site.data.store %}
+              {% if item.filter == 'binoculars'%}                                  
+                <button type="button" onclick="binocularsCheckout('{{item.id}}')" class="btn btn-blue" value="{{item.id}}">{{item.group_size}} - {{item.price}}</button>
+                <p></p>
+              {% endif %}
+            {% endfor %}         
           </div>
         </div>
       </div>
     </article>
-    <section class="pb-md-9 overflow-hidden" id="purchase">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <!-- Slider -->
-            <div class="flickity-viewport-visible" data-flickity='{"cellAlign": "center", "contain": true, "imagesLoaded": true, "pageDots": false}'>
-              {% for item in site.data.store %}
-              {% if item.filter == 'item' %}
-              <div class="w-100 px-2" id="{{ item.id }}" style="max-width: 320px;">
-
-                <!-- Card -->
-                <div class="card border-0">
-
-                  <!-- Image -->
-                  <img class="card-img-top" src="{{item.image}}" alt="{{ item.name }}" />
-
-                  <!-- Body -->
-                  <div class="card-body">
-
-                    <!-- Heading -->
-                    <div class="row mb-2">
-                      <div class="col">
-                        <h5 class="mb-0">Buy {{ item.name }}</h5>
-                      </div>
-                      <div class="col-auto">
-                        <span class="fs-4 font-serif text-black">${{ item.cost }}</span>
-                      </div>
-                    </div>
-
-                    <!-- Text -->
-                    <p class="mb-0">
-                      {{ item.description }}
-                    </p>
-
-                  </div>
-
-                </div>
-
-              </div>
-              {% endif %}
-              {% endfor %}
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
+  
     <script>
-      (function() {
-         var stripe = Stripe('pk_live_51LJDF4GzHckhqGK034oaGgaRB466qFtNnEltpyUinoG4Pv9psv7R5MFw7FpHAZu9Yw1LQ77KDyruaOlXXrLfJOBK00YpGbVyni');
-      
-        var checkoutButton = document.getElementById('checkout-button-price_1MVqoLGzHckhqGK0CowQNqsJ');
-        checkoutButton.addEventListener('click', function () {
-          stripe.redirectToCheckout({
-            lineItems: [{price: 'price_1MVqoLGzHckhqGK0CowQNqsJ', quantity: 1}],
-            mode: 'payment',
-            successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
-            cancelUrl: window.location.protocol + '//www.underthestars.co.nz/cancelled',
-          shippingAddressCollection: {
-            allowedCountries: ['NZ','AU'],
+      function binocularsCheckout(price_id) {
+        var stripe = Stripe('pk_live_51LJDF4GzHckhqGK034oaGgaRB466qFtNnEltpyUinoG4Pv9psv7R5MFw7FpHAZu9Yw1LQ77KDyruaOlXXrLfJOBK00YpGbVyni');
+        stripe.redirectToCheckout({
+          lineItems: [{ price: price_id, quantity: 1 }],
+          mode: 'payment',
+          successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
+          cancelUrl : window.location.protocol + '//www.underthestars.co.nz/cancelled',
+          shippingAddressCollection: { allowedCountries: ['NZ', 'AU'],}
+        })
+        .then(function(result) {
+          if (result.error){
+            var displayError = document.getElementById('error-message');
+            displayError.textContent = result.error.message;
           }
-          })
-          .then(function (result) {
-            if (result.error) {
-              var displayError = document.getElementById('error-message');
-              displayError.textContent = result.error.message;
-            }
-          });
-        });
-      
-      })();
+        });   
+      }      
       </script>
       

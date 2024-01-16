@@ -38,4 +38,8 @@
   group_size: 10 people - 90 minutes 
   price: $475
   filter: voucher
+- id: price_1MVqoLGzHckhqGK0CowQNqsJ
+  group_size: Buy Binoculars  
+  price: $125
+  filter: binoculars 
   
