@@ -72,7 +72,11 @@ theme: light
           mode: 'payment',
           successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
           cancelUrl : window.location.protocol + '//www.underthestars.co.nz/cancelled',
-          shippingAddressCollection: { allowedCountries: ['NZ', 'AU'],}
+          shippingAddressCollection: { allowedCountries: ['NZ'],},
+          shippingOptions: [
+            { shippingRate: "shr_1SV88AGzHckhqGK0rBz6GksF" },
+            { shippingRate: "shr_1SV8NcGzHckhqGK0zSo9voaG" }
+          ]
         })
         .then(function(result) {
           if (result.error){
