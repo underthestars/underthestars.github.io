@@ -38,3 +38,7 @@
   group_size: 10 people - 90 minutes 
   price: $475
   filter: voucher  
+- id: price_1SUjlNGzHckhqGK0XGOif9JE
+  group_size: 0  
+  price: $25
+  filter: calendar  
