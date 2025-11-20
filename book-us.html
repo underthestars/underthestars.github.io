@@ -46,8 +46,10 @@ title: Book Us | Astronomy Experiences under the Wairarapa's Dark Sky
               
             </p>               
             {% for item in site.data.store %}
-              {% if item.id != 'price_1Nd7UFGzHckhqGK0nycNXgzZ' %}  
-                <div class="well well-sm">{{item.group_size}} - {{item.price}}</div>    
+              {% if item.filter == 'voucher' %}
+                {% if item.id != 'price_1Nd7UFGzHckhqGK0nycNXgzZ' %}  
+                  <div class="well well-sm">{{item.group_size}} - {{item.price}}</div>    
+                {% endif %}
               {% endif %}
             {% endfor %}           
              <p></p>

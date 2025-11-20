@@ -8,7 +8,7 @@ theme: light
 <script src="https://js.stripe.com/v3"></script>
 
     <!-- VOUCHERS -->
-    <article class="pt-10 pt-md-12">
+    <article class="pt-8 pt-md-10">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-md-8 col-lg-6 text-center">
@@ -27,12 +27,10 @@ theme: light
         </div>
         <div class="row">
           <div class="col-12">
-
             <!-- Image -->
             <figure class="mb-6 text-center">
               <img class="img-fluid" src="/assets/img/Wairarapa-dark-sky-calendar.png" alt="calendar">
             </figure>
-
           </div>
         </div>
         <div class="row justify-content-center">
@@ -48,7 +46,7 @@ theme: light
               All funds from the sale of these calendars goes to Wairarapa Dark Sky Association and supports the important work of protecting our beautiful dark sky reserve.
 						</p>
 						<p>	
-							Postage within NZ is $14 and included in the price. 
+							Postage within NZ is $14. 
 						</p>
 						<p class="mb-6">
 							(On purchase you will be taken to our payment processor Stripe, if you want to talk about other ways to pay then <a href="/contact-us/" class="text-blue">Contact us here</a>.)
@@ -74,8 +72,8 @@ theme: light
           cancelUrl : window.location.protocol + '//www.underthestars.co.nz/cancelled',
           shippingAddressCollection: { allowedCountries: ['NZ'],},
           shippingOptions: [
-            { shippingRate: "shr_1SV88AGzHckhqGK0rBz6GksF" },
-            { shippingRate: "shr_1SV8NcGzHckhqGK0zSo9voaG" }
+            { shippingRate: 'shr_1SV88AGzHckhqGK0rBz6GksF' },
+            { shippingRate: 'shr_1SV8NcGzHckhqGK0zSo9voaG' }
           ]
         })
         .then(function(result) {
