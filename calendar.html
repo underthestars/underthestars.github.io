@@ -7,7 +7,7 @@ theme: light
 <!-- Load Stripe.js on your website. -->
 <script src="https://js.stripe.com/v3"></script>
 
-    <!-- VOUCHERS -->
+    <!-- CALENDAR -->
     <article class="pt-8 pt-md-10">
       <div class="container">
         <div class="row justify-content-center">
@@ -50,38 +50,18 @@ theme: light
 						</p>
 						<p class="mb-6">
 							(On purchase you will be taken to our payment processor Stripe, if you want to talk about other ways to pay then <a href="/contact-us/" class="text-blue">Contact us here</a>.)
-						</p>
-            {% for item in site.data.store %}
-              {% if item.filter == 'calendar'%}                                  
-                <button type="button" onclick="calendarCheckout('{{item.id}}')" class="btn btn-blue" value="{{item.id}}"> Buy Calendar - {{item.price}}</button>
-                <p></p>
-              {% endif %}
-            {% endfor %}         
+						</p>                   
+          <script async
+            src="https://js.stripe.com/v3/buy-button.js">
+          </script>
+
+          <stripe-buy-button
+            buy-button-id="buy_btn_1SVVz0GzHckhqGK09RF99fU6"
+            publishable-key="pk_live_51LJDF4GzHckhqGK034oaGgaRB466qFtNnEltpyUinoG4Pv9psv7R5MFw7FpHAZu9Yw1LQ77KDyruaOlXXrLfJOBK00YpGbVyni"
+          >
+          </stripe-buy-button>
+          <p></p>  
           </div>
         </div>
       </div>
     </article>
-  
-    <script>
-      function calendarCheckout(price_id) {
-        var stripe = Stripe('pk_live_51LJDF4GzHckhqGK034oaGgaRB466qFtNnEltpyUinoG4Pv9psv7R5MFw7FpHAZu9Yw1LQ77KDyruaOlXXrLfJOBK00YpGbVyni');
-        stripe.redirectToCheckout({
-          lineItems: [{ price: price_id, quantity: 1 }],
-          mode: 'payment',
-          successUrl: window.location.protocol + '//www.underthestars.co.nz/success',
-          cancelUrl : window.location.protocol + '//www.underthestars.co.nz/cancelled',
-          shippingAddressCollection: { allowedCountries: ['NZ'],},
-          shippingOptions: [
-            { shippingRate: 'shr_1SV88AGzHckhqGK0rBz6GksF' },
-            { shippingRate: 'shr_1SV8NcGzHckhqGK0zSo9voaG' }
-          ]
-        })
-        .then(function(result) {
-          if (result.error){
-            var displayError = document.getElementById('error-message');
-            displayError.textContent = result.error.message;
-          }
-        });   
-      }      
-      </script>
-      
