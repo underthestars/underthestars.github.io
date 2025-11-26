@@ -72,13 +72,25 @@ theme: light
             </h2>
             <p class="mb-6">
 							(On purchase you will be taken to our payment processor Stripe, if you want to talk about other ways to pay then <a href="/contact-us/" class="text-blue">Contact us here</a>.)
-						</p>            
+						</p>       
+            <p>   
+                <script async
+                  src="https://js.stripe.com/v3/buy-button.js">
+                </script>
+
+                <stripe-buy-button
+                  buy-button-id="buy_btn_1SXZ83GzHckhqGK08TZVBYXI"
+                  publishable-key="pk_live_51LJDF4GzHckhqGK034oaGgaRB466qFtNnEltpyUinoG4Pv9psv7R5MFw7FpHAZu9Yw1LQ77KDyruaOlXXrLfJOBK00YpGbVyni"
+                >
+                </stripe-buy-button>
+            </p>          
+                      
             {% for item in site.data.store %}
               {% if item.filter == 'voucher'%}                                  
                 <button type="button" onclick="voucherCheckout('{{item.id}}')" class="btn btn-blue" value="{{item.id}}">{{item.group_size}} - {{item.price}}</button>
                 <p></p>
               {% endif %}
-            {% endfor %}         
+            {% endfor %}  
             <p></p>
             </div>
           </div>
