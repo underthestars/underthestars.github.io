@@ -8,6 +8,16 @@
   detail_4: Includes shipping within NZ
   filter: tekapo-saddle
   cost: 275
+- id: checkout-button-price_1SrE0fGzHckhqGK0XEJBYKzd
+  name: <strong> Tarantula Nebula </strong>
+  image: /assets/img/photography/Tarantula_SM.jpg
+  description: Fine art print on archival grade paper.
+  detail_1: A2 Matte border (50mm)
+  detail_2: A2 Foamboard backing
+  detail_3: Ready for the frame of your choice
+  detail_4: Includes shipping within NZ
+  filter: tarantula-nebula
+  cost: 235
 - id: checkout-button-price_1MsjVDGzHckhqGK0npzz33IY
   name: <strong> Matariki Tahi </strong>
   image: /assets/img/photography/Matariki_Tahi.jpg
