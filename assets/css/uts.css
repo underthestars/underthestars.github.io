@@ -3,6 +3,7 @@
 .text-yellow{color: #fad549;}
 .text-blue{color: #46a2db;}
 .text-red{color: #f81616;}
+.text-lightgrey{color:lightgray}
 
 .btn-blue{color: #46a2db; border-color: #46a2db; border-style:double;}
 
@@ -10,7 +11,6 @@ footer a{text-decoration: none !important; color: #6c757d !important}
 footer a:hover{color: #46a2db !important}
 .text-dark-link{text-decoration: none !important; color: #6c757d !important} 
 .text-dark-link:hover{color: #46a2db !important}
-
 
 blockquote>p:before{content:none !important}.blockquote>p:after{content:none !important}
 
