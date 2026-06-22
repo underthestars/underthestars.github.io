@@ -42,3 +42,8 @@ transition: color .1s;
     margin-top: -10px;
     color:black;
 }
+
+.hero-section {
+    background: url('/assets/img/Wedding_Page_Header_Textless.jpg') ;
+    height: 100vh;
+}
